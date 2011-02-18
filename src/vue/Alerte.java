@@ -3,11 +3,14 @@
  */
 package vue;
 
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  * @author namor
@@ -23,6 +26,8 @@ public class Alerte extends JFrame implements ActionListener{
     private JButton non;
     /** Indique le type de fenêtre courant */
     private int type;
+    /** Le panel central */
+    private JPanel panel;
     
     /**
      * Crée une fenêtre d'alerte à un ou 2 boutons
@@ -30,18 +35,24 @@ public class Alerte extends JFrame implements ActionListener{
      */
     public Alerte(int type){
         this.type = type;
+        setLayout(new BorderLayout());
+        panel = new JPanel(new FlowLayout());
+        panel.setSize(100, 50);
+        add(panel, BorderLayout.CENTER);
         if(type == 1){
             ok = new JButton("Ok");
             ok.addActionListener(this);
-            add(ok);
+            panel.add(ok);
         }
         if(type == 2){
             non = new JButton("Non");
             oui = new JButton("Oui");
             non.addActionListener(this);
             oui.addActionListener(this);
-            add(non); add(oui);
+            panel.add(non);
+            panel.add(oui);
         }
+        setSize(150, 80);
     }
     
     /**
