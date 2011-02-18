@@ -7,6 +7,7 @@ package controle;
  * @author namor
  * @author Zarmakuizz
  */
+
 public class Controler {
     
     public void vueAjout(){
