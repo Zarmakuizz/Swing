@@ -36,23 +36,23 @@ public class Alerte extends JFrame implements ActionListener{
     public Alerte(int type){
         this.type = type;
         setLayout(new BorderLayout());
-        panel = new JPanel(new FlowLayout());
-        panel.setSize(100, 50);
+        panel = new JPanel(new BorderLayout());
         add(panel, BorderLayout.CENTER);
         if(type == 1){
             ok = new JButton("Ok");
             ok.addActionListener(this);
-            panel.add(ok);
+            panel.add(ok, BorderLayout.CENTER);
         }
         if(type == 2){
             non = new JButton("Non");
             oui = new JButton("Oui");
             non.addActionListener(this);
             oui.addActionListener(this);
-            panel.add(non);
-            panel.add(oui);
+            panel.add(non, BorderLayout.EAST);
+            panel.add(oui, BorderLayout.WEST);
         }
-        setSize(150, 80);
+        //setSize(150, 80);
+        pack();
     }
     
     /**
