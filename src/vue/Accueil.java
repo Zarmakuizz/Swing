@@ -9,7 +9,6 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTree;
@@ -17,7 +16,6 @@ import javax.swing.tree.DefaultMutableTreeNode;
 
 /**
  * @author namor
- * @author Zarmakuizz
  */
 
 public class Accueil extends JFrame implements ActionListener {

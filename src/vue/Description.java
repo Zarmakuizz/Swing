@@ -9,7 +9,6 @@ import javax.swing.JLabel;
 
 /**
  * @author namor
- * @author Zarmakuizz
  */
 
 public class Description extends Detail implements ActionListener {

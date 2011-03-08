@@ -15,7 +15,6 @@ import javax.swing.JPanel;
 
 /**
  * @author namor
- * @author Zarmakuizz
  */
 
 public abstract class Detail extends JFrame implements ActionListener {

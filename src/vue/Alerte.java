@@ -14,7 +14,6 @@ import javax.swing.JPanel;
 
 /**
  * @author namor
- * @author Zarmakuizz
  */
 
 public class Alerte extends JFrame implements ActionListener{

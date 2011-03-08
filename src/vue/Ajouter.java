@@ -11,7 +11,6 @@ import javax.swing.JTextField;
 
 /**
  * @author namor
- * @author Zarmakuizz
  */
 
 public class Ajouter extends Detail implements ActionListener {

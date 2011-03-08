@@ -6,12 +6,10 @@ package vue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
 import javax.swing.JTextField;
 
 /**
  * @author namor
- * @author Zarmakuizz
  */
 
 public class Modifier extends Detail implements ActionListener {
