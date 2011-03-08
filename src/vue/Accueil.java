@@ -12,6 +12,8 @@ import javax.swing.JFrame;
 import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.JTree;
+import javax.swing.tree.DefaultMutableTreeNode;
 
 /**
  * @author namor
@@ -25,13 +27,13 @@ public class Accueil extends JFrame implements ActionListener {
     private JScrollPane pCentral;
     /** Le panel des boutons */
     private JPanel pBoutons;
-    /** la liste des noms de groupe */
-    private JList lGroupe;
-    /** la liste des noms de personnes du groupe sélectionné */
-    private JList lPersonnes;
-
+    /** l'arbre contenant le répertoire */
+    private JTree tree;
+    /** Noeuds */
+    DefaultMutableTreeNode racine, groupes, personnes;
+    
     public Accueil() {
-        setSize(500, 200);
+        setSize(500, 350);
         // Boutons
         add = new JButton("Ajouter");
         mod = new JButton("Modifier");
@@ -51,14 +53,64 @@ public class Accueil extends JFrame implements ActionListener {
 
         // Panel central
         String[] lool = {"lol", "lool"};
-        JList lol = new JList(lool);
-        Object[] groupes = { "G1 blablabla", lol,"G2blablabla", "G3",
-                "G4 blablabla", "G5", "G6", "G7", "G8", "G9 blablabla",
-                "G10blablabla", "G11", "G12 blablabla", "G13", "G14", "G15", "G16" }, personnes = {
-                "P1", "P2" };
-        lGroupe = new JList(groupes);
-        lPersonnes = new JList(personnes);
-        pCentral = new JScrollPane(lGroupe);
+        
+        racine = new DefaultMutableTreeNode("Répertoire");
+        tree = new JTree(racine);
+       
+        groupes = new DefaultMutableTreeNode("Tous les contacts");
+        racine.add(groupes);
+        personnes = new DefaultMutableTreeNode("Personne1");
+        groupes.add(personnes);
+        personnes = new DefaultMutableTreeNode("Personne2");
+        groupes.add(personnes);
+        personnes = new DefaultMutableTreeNode("Personne3");
+        groupes.add(personnes);
+        personnes = new DefaultMutableTreeNode("Personne4");
+        groupes.add(personnes);
+        personnes = new DefaultMutableTreeNode("Personne5");
+        groupes.add(personnes);
+        personnes = new DefaultMutableTreeNode("Personne6");
+        groupes.add(personnes);
+        personnes = new DefaultMutableTreeNode("Personne7");
+        groupes.add(personnes);
+        personnes = new DefaultMutableTreeNode("Personne8");
+        groupes.add(personnes);
+        
+        groupes = new DefaultMutableTreeNode("groupe2");
+        racine.add(groupes);
+        groupes = new DefaultMutableTreeNode("groupe3");
+        racine.add(groupes);
+        personnes = new DefaultMutableTreeNode("Personne1");
+        groupes.add(personnes);
+        personnes = new DefaultMutableTreeNode("Personne2");
+        groupes.add(personnes);
+        groupes = new DefaultMutableTreeNode("groupe4");
+        racine.add(groupes);
+        groupes = new DefaultMutableTreeNode("groupe5");
+        racine.add(groupes);
+        personnes = new DefaultMutableTreeNode("Personne1");
+        groupes.add(personnes);
+        personnes = new DefaultMutableTreeNode("Personne2");
+        groupes.add(personnes);
+        groupes = new DefaultMutableTreeNode("groupe6");
+        racine.add(groupes);
+        groupes = new DefaultMutableTreeNode("groupe7");
+        racine.add(groupes);
+        personnes = new DefaultMutableTreeNode("Personne1");
+        groupes.add(personnes);
+        personnes = new DefaultMutableTreeNode("Personne2");
+        groupes.add(personnes);
+        groupes = new DefaultMutableTreeNode("groupe8");
+        racine.add(groupes);
+        groupes = new DefaultMutableTreeNode("groupe9");
+        racine.add(groupes);
+        personnes = new DefaultMutableTreeNode("Personne1");
+        groupes.add(personnes);
+        personnes = new DefaultMutableTreeNode("Personne2");
+        groupes.add(personnes);
+
+        
+        pCentral = new JScrollPane(tree);
         add(pCentral, BorderLayout.CENTER);
         //pCentral.add(lGroupe); // pCentral.add(lPersonnes);
     }

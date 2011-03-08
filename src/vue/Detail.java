@@ -29,7 +29,7 @@ public abstract class Detail extends JFrame implements ActionListener {
     protected JLabel nom, prenom, telM, telB, telP;
 
     public Detail() {
-        setSize(500, 400);
+        setSize(300, 200);
         // Boutons
         ann = new JButton("Annuler");
         act = new JButton("Action");
