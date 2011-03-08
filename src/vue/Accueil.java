@@ -50,7 +50,9 @@ public class Accueil extends JFrame implements ActionListener {
         supp.addActionListener(this);
 
         // Panel central
-        String[] groupes = { "G1 blablabla", "G2blablabla", "G3",
+        String[] lool = {"lol", "lool"};
+        JList lol = new JList(lool);
+        Object[] groupes = { "G1 blablabla", lol,"G2blablabla", "G3",
                 "G4 blablabla", "G5", "G6", "G7", "G8", "G9 blablabla",
                 "G10blablabla", "G11", "G12 blablabla", "G13", "G14", "G15", "G16" }, personnes = {
                 "P1", "P2" };
