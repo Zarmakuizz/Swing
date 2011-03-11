@@ -27,7 +27,6 @@ public class AccueilControler {
     public AccueilControler(){
         accueil = new Accueil();
         accueil.setVisible(true);
-        
         modele = new Modele();
 
         // On va mettre à jour la fenêtre, on remplit la liste avec les données des contacts
