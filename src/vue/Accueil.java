@@ -6,6 +6,7 @@ package vue;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Collection;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -14,10 +15,15 @@ import javax.swing.JScrollPane;
 import javax.swing.JTree;
 import javax.swing.tree.DefaultMutableTreeNode;
 
+import modele.Modele;
+
 import controle.AccueilControler;
 import controle.AjouterControler;
 import controle.DescriptionControler;
 import controle.ModifierControler;
+import fr.polytech.pooihm.phonebook.Contact;
+import fr.polytech.pooihm.phonebook.ContactAlreadyDefinedException;
+import fr.polytech.pooihm.phonebook.Person;
 
 /**
  * @author namor
@@ -115,6 +121,7 @@ public class Accueil extends JFrame implements ActionListener {
         
         pCentral = new JScrollPane(tree);
         add(pCentral, BorderLayout.CENTER);
+        
     }
 
     /**
