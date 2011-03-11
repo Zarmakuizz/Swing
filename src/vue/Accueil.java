@@ -14,6 +14,11 @@ import javax.swing.JScrollPane;
 import javax.swing.JTree;
 import javax.swing.tree.DefaultMutableTreeNode;
 
+import controle.AccueilControler;
+import controle.AjouterControler;
+import controle.DescriptionControler;
+import controle.ModifierControler;
+
 /**
  * @author namor
  */
@@ -110,7 +115,6 @@ public class Accueil extends JFrame implements ActionListener {
         
         pCentral = new JScrollPane(tree);
         add(pCentral, BorderLayout.CENTER);
-        //pCentral.add(lGroupe); // pCentral.add(lPersonnes);
     }
 
     /**
@@ -122,13 +126,13 @@ public class Accueil extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == add) {
-            add.setText("lol");
+            AjouterControler.vueAjout();
         } else if (e.getSource() == mod) {
-            mod.setText("lol");
+            ModifierControler.vueModifier();
         } else if (e.getSource() == desc) {
-            desc.setText("lol");
+            DescriptionControler.vueDescription();
         } else if (e.getSource() == supp) {
-            supp.setText("lol");
+            AccueilControler.vueSuppression();
         }
     }
 

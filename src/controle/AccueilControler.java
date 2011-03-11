@@ -3,6 +3,10 @@
  */
 package controle;
 
+import javax.swing.JOptionPane;
+
+import test.Test;
+
 /**
  * @author namor
  */
@@ -10,22 +14,29 @@ package controle;
 public class AccueilControler {
     
     /** Demande si on est sur de supprimer */
-    public void vueSuppression(){
+    public static void vueSuppression(){
+        int n = JOptionPane.showConfirmDialog(
+            Test.getAccueil(),
+            "Etes-vous sûr de vouloir supprimer ?",
+            "Danger critique !",
+            JOptionPane.YES_NO_OPTION);
         
+        if(n==0) ouiSuppression();
+        else nonSuppression();
     }
     
     /** Supprime */
-    public void ouiSuppression(){
-        
+    public static void ouiSuppression(){
+        System.out.println("Noooooo it burns !");
     }
     
     /** Annule la suppression */
-    public void nonSuppression(){
+    public static void nonSuppression(){
         
     }
     
     /** Permet de charger le groupe sélectionné */
-    public void selectionGroupe(){
+    public static void selectionGroupe(){
         
     }
 

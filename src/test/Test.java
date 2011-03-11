@@ -16,10 +16,14 @@ public class Test {
         dt1 = new Ajouter();
         dt2 = new Modifier();
         dt3 = new Description();
-        dt1.setVisible(true); dt2.setVisible(true); dt3.setVisible(true);
+        //dt1.setVisible(true); dt2.setVisible(true); dt3.setVisible(true);
         ac = new Accueil();
         ac.setVisible(true);
         
+    }
+    
+    public static Accueil getAccueil(){
+        return ac;
     }
 
 }

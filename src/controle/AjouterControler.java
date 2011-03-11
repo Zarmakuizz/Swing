@@ -3,24 +3,28 @@
  */
 package controle;
 
+import vue.Ajouter;
+
+
 /**
  * @author namor
  */
 
-public class AjouterControler {
+public class AjouterControler extends DetailControler{
     
     /** Lance la vue Ajouter */
-    public void vueAjout(){
-        
+    public static void vueAjout(){
+        vue = new Ajouter();
+        vue.setVisible(true);
     }
     
     /** Ajoute le contact */
-    public void validerAjout(){
+    public static void validerAjout(){
         
     }
     
     /** Annule l'ajout */
-    public void annulerAjout(){
+    public static void annulerAjout(){
         
     }
 

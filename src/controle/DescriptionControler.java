@@ -3,19 +3,22 @@
  */
 package controle;
 
+import vue.Description;
+
 /**
  * @author namor
  */
 
-public class DescriptionControler {
+public class DescriptionControler extends DetailControler{
     
     /** Lance la vue Description */
-    public void vueDescription(){
-        
+    public static void vueDescription(){
+        vue = new Description();
+        vue.setVisible(true);
     }
     
     /** Permet de quitter la description */
-    public void quitterDescription(){
+    public static void quitterDescription(){
         
     }
 
