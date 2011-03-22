@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Set;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -23,6 +24,8 @@ import controle.AjouterControler;
 import controle.DescriptionControler;
 import controle.ModifierControler;
 import javax.swing.tree.*;
+
+import fr.polytech.pooihm.phonebook.Person;
 
 
 /**
@@ -82,15 +85,18 @@ public class Accueil extends JFrame implements ActionListener {
      * @param donnees
      *          Les données des groupes et personnes
      */
-    /*public void fillTheTree(String[][] donnees){
+    public void fillTheTree(ArrayList<ArrayList<ArrayList<String>>> donnees, ArrayList<String> groupe){
         //Pour chaque groupe
-        for(String[] groupe : donnees){
+        for(int i=0; i<donnees.size(); i++){
+            groupes = new DefaultMutableTreeNode(groupe.get(i));
+            racine.add(groupes);
             //Pour chaque personne
-            for(String personne : groupe){
-                
+            for(ArrayList<String> personne : donnees.get(i)){
+                personnes = new DefaultMutableTreeNode(personne.get(0)+" "+personne.get(1));
+                groupes.add(personnes);
             }
         }
-    }*/
+    }
     
     /**
      * Permet de remplir le groupe par défaut qui contient toutes les personnes.

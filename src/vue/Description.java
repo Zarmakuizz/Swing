@@ -42,7 +42,7 @@ public class Description extends Detail implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == ann) {
-            ann.setText("lol");
+            setVisible(false);
         }
     }
 

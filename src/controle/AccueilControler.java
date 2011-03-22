@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 import modele.Modele;
 import fr.polytech.pooihm.phonebook.Contact;
 import fr.polytech.pooihm.phonebook.ContactAlreadyDefinedException;
+import fr.polytech.pooihm.phonebook.GroupNotDefinedException;
 import fr.polytech.pooihm.phonebook.Person;
 
 import test.Test;
@@ -34,6 +35,12 @@ public class AccueilControler {
             System.out.println(c);
         }
         accueil.fillAllPersons(modele.getAllPersons());
+        try {
+            accueil.fillTheTree(modele.getAllGroupsPersons(), modele.getGroupes());
+        } catch (GroupNotDefinedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
     
     /** Demande si on est sur de supprimer */
@@ -50,7 +57,6 @@ public class AccueilControler {
     
     /** Supprime */
     public static void ouiSuppression(){
-        System.out.println("Noooooo it burns !");
     }
     
     /** Annule la suppression */

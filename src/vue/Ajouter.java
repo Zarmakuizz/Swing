@@ -45,9 +45,9 @@ public class Ajouter extends Detail implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == act) {
-            act.setText("lol");
+            
         } else if (e.getSource() == ann) {
-            ann.setText("lol");
+            setVisible(false);
         }
     }
 
