@@ -30,16 +30,14 @@ public class AccueilControler {
         accueil.setVisible(true);
         modele = new Modele();
 
-        // On va mettre à jour la fenêtre, on remplit la liste avec les données des contacts
-        for(Contact c : modele.getAllContacts()){
-            System.out.println(c);
-        }
         accueil.fillAllPersons(modele.getAllPersons());
         try {
             accueil.fillTheTree(modele.getAllGroupsPersons(), modele.getGroupes());
         } catch (GroupNotDefinedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            //On affiche une fenetre d'erreur pour informer l'utilisateur
+            JOptionPane erreur = new JOptionPane();
+            erreur.showMessageDialog( accueil, "Ce groupe n'existe pas.", 
+                  "Attention", JOptionPane.WARNING_MESSAGE);
         }
     }
     
