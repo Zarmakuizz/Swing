@@ -4,8 +4,10 @@
 package vue;
 
 import java.awt.BorderLayout;
+import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.Collection;
 
 import javax.swing.JButton;
@@ -15,15 +17,13 @@ import javax.swing.JScrollPane;
 import javax.swing.JTree;
 import javax.swing.tree.DefaultMutableTreeNode;
 
-import modele.Modele;
 
 import controle.AccueilControler;
 import controle.AjouterControler;
 import controle.DescriptionControler;
 import controle.ModifierControler;
-import fr.polytech.pooihm.phonebook.Contact;
-import fr.polytech.pooihm.phonebook.ContactAlreadyDefinedException;
-import fr.polytech.pooihm.phonebook.Person;
+import javax.swing.tree.*;
+
 
 /**
  * @author namor
@@ -63,65 +63,48 @@ public class Accueil extends JFrame implements ActionListener {
         // Panel central
         String[] lool = {"lol", "lool"};
         
+        
+        
         racine = new DefaultMutableTreeNode("Répertoire");
         tree = new JTree(racine);
-       
-        groupes = new DefaultMutableTreeNode("Tous les contacts");
-        racine.add(groupes);
-        personnes = new DefaultMutableTreeNode("Personne1");
-        groupes.add(personnes);
-        personnes = new DefaultMutableTreeNode("Personne2");
-        groupes.add(personnes);
-        personnes = new DefaultMutableTreeNode("Personne3");
-        groupes.add(personnes);
-        personnes = new DefaultMutableTreeNode("Personne4");
-        groupes.add(personnes);
-        personnes = new DefaultMutableTreeNode("Personne5");
-        groupes.add(personnes);
-        personnes = new DefaultMutableTreeNode("Personne6");
-        groupes.add(personnes);
-        personnes = new DefaultMutableTreeNode("Personne7");
-        groupes.add(personnes);
-        personnes = new DefaultMutableTreeNode("Personne8");
-        groupes.add(personnes);
-        
-        groupes = new DefaultMutableTreeNode("groupe2");
-        racine.add(groupes);
-        groupes = new DefaultMutableTreeNode("groupe3");
-        racine.add(groupes);
-        personnes = new DefaultMutableTreeNode("Personne1");
-        groupes.add(personnes);
-        personnes = new DefaultMutableTreeNode("Personne2");
-        groupes.add(personnes);
-        groupes = new DefaultMutableTreeNode("groupe4");
-        racine.add(groupes);
-        groupes = new DefaultMutableTreeNode("groupe5");
-        racine.add(groupes);
-        personnes = new DefaultMutableTreeNode("Personne1");
-        groupes.add(personnes);
-        personnes = new DefaultMutableTreeNode("Personne2");
-        groupes.add(personnes);
-        groupes = new DefaultMutableTreeNode("groupe6");
-        racine.add(groupes);
-        groupes = new DefaultMutableTreeNode("groupe7");
-        racine.add(groupes);
-        personnes = new DefaultMutableTreeNode("Personne1");
-        groupes.add(personnes);
-        personnes = new DefaultMutableTreeNode("Personne2");
-        groupes.add(personnes);
-        groupes = new DefaultMutableTreeNode("groupe8");
-        racine.add(groupes);
-        groupes = new DefaultMutableTreeNode("groupe9");
-        racine.add(groupes);
-        personnes = new DefaultMutableTreeNode("Personne1");
-        groupes.add(personnes);
-        personnes = new DefaultMutableTreeNode("Personne2");
-        groupes.add(personnes);
-
+        //tree.setShowsRootHandles(true);
+        tree.expandPath(tree.getPathForRow(2)); // ???
         
         pCentral = new JScrollPane(tree);
         add(pCentral, BorderLayout.CENTER);
         
+    }
+
+    
+    
+    /**
+     * Permet de remplir le JTree avec la liste de groupes et personnes visibles
+     * @param donnees
+     *          Les données des groupes et personnes
+     */
+    /*public void fillTheTree(String[][] donnees){
+        //Pour chaque groupe
+        for(String[] groupe : donnees){
+            //Pour chaque personne
+            for(String personne : groupe){
+                
+            }
+        }
+    }*/
+    
+    /**
+     * Permet de remplir le groupe par défaut qui contient toutes les personnes.
+     * @param donnees
+     *          Les données de toutes les personnes
+     */
+    public void fillAllPersons(ArrayList<ArrayList<String>> donnees){
+        groupes = new DefaultMutableTreeNode("Tous les contacts");
+        racine.add(groupes);
+        //On remplit le Groupe par défaut des personnes données
+        for(ArrayList<String> personne : donnees){
+            personnes = new DefaultMutableTreeNode(personne.get(0)+" "+personne.get(1));
+            groupes.add(personnes);
+        }
     }
 
     /**

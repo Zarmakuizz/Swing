@@ -33,6 +33,7 @@ public class AccueilControler {
         for(Contact c : modele.getAllContacts()){
             System.out.println(c);
         }
+        accueil.fillAllPersons(modele.getAllPersons());
     }
     
     /** Demande si on est sur de supprimer */
