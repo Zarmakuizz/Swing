@@ -1,0 +1,2 @@
+serviceClass: polytech.gwt.client.GreetingService
+path: 4D06458C956E7B6E88A08391AA645436.gwt.rpc
