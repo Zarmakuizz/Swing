@@ -17,6 +17,6 @@
 
   <!-- Specify the paths for translatable code                    -->
   <source path='client'/>
-  <source path='shared'/>
+  <source path='shared'/><inherits name="fr.polytech.pooihm.PhoneBook"></inherits>
 
 </module>
