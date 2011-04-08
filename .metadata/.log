@@ -1,0 +1,33 @@
+!SESSION 2011-04-08 11:09:36.381 -----------------------------------------------
+eclipse.buildId=M20100211-1343
+java.version=1.6.0_20
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2011-04-08 11:10:45.002
+!MESSAGE Registering: com.google.appengine.eclipse.sdkbundle_1.4.3.v201103311225
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2011-04-08 11:10:45.140
+!MESSAGE Registering: com.google.gwt.eclipse.sdkbundle_2.2.0.v201103311225
+
+!ENTRY org.eclipse.ui 4 4 2011-04-08 11:12:08.240
+!MESSAGE Invalid preference page path: CSS Files
+
+!ENTRY org.eclipse.ui 4 4 2011-04-08 11:12:08.240
+!MESSAGE Invalid preference page path: JavaScript
+!SESSION 2011-04-08 11:16:59.195 -----------------------------------------------
+eclipse.buildId=M20100211-1343
+java.version=1.6.0_20
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2011-04-08 11:17:08.345
+!MESSAGE Registering: com.google.appengine.eclipse.sdkbundle_1.4.3.v201103311225
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2011-04-08 11:17:09.535
+!MESSAGE Registering: com.google.gwt.eclipse.sdkbundle_2.2.0.v201103311225
+
+!ENTRY com.google.gdt.eclipse.core 1 0 2011-04-08 11:17:09.977
+!MESSAGE Scheduled rebuild of project GWT because of plugin update (current version: 2.2.1.v201103311225)
