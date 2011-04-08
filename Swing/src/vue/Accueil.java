@@ -62,16 +62,9 @@ public class Accueil extends JFrame implements ActionListener {
         mod.addActionListener(this);
         desc.addActionListener(this);
         supp.addActionListener(this);
-
-        // Panel central
-        String[] lool = {"lol", "lool"};
-        
-        
         
         racine = new DefaultMutableTreeNode("Répertoire");
         tree = new JTree(racine);
-        //tree.setShowsRootHandles(true);
-        tree.expandPath(tree.getPathForRow(2)); // ???
         
         pCentral = new JScrollPane(tree);
         add(pCentral, BorderLayout.CENTER);

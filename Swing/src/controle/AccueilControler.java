@@ -29,14 +29,14 @@ public class AccueilControler {
         accueil = new Accueil();
         accueil.setVisible(true);
         modele = new Modele();
-
+        
+        
         accueil.fillAllPersons(modele.getAllPersons());
         try {
             accueil.fillTheTree(modele.getAllGroupsPersons(), modele.getGroupes());
         } catch (GroupNotDefinedException e) {
             //On affiche une fenetre d'erreur pour informer l'utilisateur
-            JOptionPane erreur = new JOptionPane();
-            erreur.showMessageDialog( accueil, "Ce groupe n'existe pas.", 
+            JOptionPane.showMessageDialog( accueil, "Ce groupe n'existe pas.", 
                   "Attention", JOptionPane.WARNING_MESSAGE);
         }
     }
@@ -51,6 +51,11 @@ public class AccueilControler {
         
         if(n==0) ouiSuppression();
         else nonSuppression();
+    }
+    
+    /** Permet d'accéder au modèle */
+    public static Modele getModel(){
+        return modele;
     }
     
     /** Supprime */

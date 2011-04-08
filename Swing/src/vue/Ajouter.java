@@ -9,6 +9,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
+import controle.AjouterControler;
+
 /**
  * @author namor
  */
@@ -28,12 +30,12 @@ public class Ajouter extends Detail implements ActionListener {
         telMField = new JTextField();
         telBField = new JTextField();
         telPField = new JTextField();
+
         pCentral.add(nom); pCentral.add(nomField);
         pCentral.add(prenom); pCentral.add(prenomField);
         pCentral.add(telM); pCentral.add(telMField);
         pCentral.add(telB); pCentral.add(telBField);
         pCentral.add(telP); pCentral.add(telPField);
-        
     }
 
     /**
@@ -45,9 +47,10 @@ public class Ajouter extends Detail implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == act) {
-            
-        } else if (e.getSource() == ann) {
+            AjouterControler.validerAjout(nomField.getText(), prenomField.getText(), telMField.getText(), telBField.getText(), telPField.getText());
             setVisible(false);
+        } else if (e.getSource() == ann) {
+            AjouterControler.annulerAjout();
         }
     }
 

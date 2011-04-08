@@ -24,7 +24,7 @@ public class ModifierControler extends DetailControler{
     
     /** Annule la modification */
     public static void annulerModification(){
-        
+        vue.setVisible(false);
     }
 
 }
