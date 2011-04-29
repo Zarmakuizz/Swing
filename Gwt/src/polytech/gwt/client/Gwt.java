@@ -1,5 +1,6 @@
 package polytech.gwt.client;
 
+import polytech.gwt.client.view.Accueil;
 import polytech.gwt.shared.FieldVerifier;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
@@ -43,6 +44,7 @@ public class Gwt implements EntryPoint {
 		final TextBox nameField = new TextBox();
 		nameField.setText("GWT User");
 		final Label errorLabel = new Label();
+		final Accueil accueil = new Accueil();
 
 		// We can add style names to widgets
 		sendButton.addStyleName("sendButton");

@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.google.gwt.core.client.EntryPoint"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.client.ui.RadioButton"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.client.ui.FlowPanel"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.client.ui.RootPanel"/>
+<fullyQualifiedTypeName name="polytech.gwt.client.view.Accueil"/>
+</qualifiedTypeNameHistroy>
