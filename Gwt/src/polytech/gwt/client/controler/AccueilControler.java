@@ -1,7 +1,5 @@
 package polytech.gwt.client.controler;
 
-import javax.swing.JOptionPane;
-
 import polytech.gwt.client.modele.Modele;
 import polytech.gwt.client.view.Accueil;
 import fr.polytech.pooihm.phonebook.GroupNotDefinedException;

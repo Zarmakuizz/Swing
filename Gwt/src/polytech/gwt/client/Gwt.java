@@ -9,14 +9,18 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.event.dom.client.KeyUpEvent;
 import com.google.gwt.event.dom.client.KeyUpHandler;
+import com.google.gwt.i18n.client.Constants;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.CheckBox;
 import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.Widget;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
@@ -150,5 +154,37 @@ public class Gwt implements EntryPoint {
 		MyHandler handler = new MyHandler();
 		sendButton.addClickHandler(handler);
 		nameField.addKeyUpHandler(handler);
-	}
+		
+
+	}	
+	
+	
+
+
+	  public Widget onInitialize() {
+	    // Create a vertical panel to align the check boxes
+	    VerticalPanel vPanel = new VerticalPanel();
+	    HTML label = new HTML("lol");
+	    label.ensureDebugId("cwCheckBox-label");
+	    vPanel.add(label);
+
+	    // Add a checkbox for each day of the week
+	    String[] daysOfWeek = {"olol", "ololol"};
+	    for (int i = 0; i < daysOfWeek.length; i++) {
+	      String day = daysOfWeek[i];
+	      CheckBox checkBox = new CheckBox(day);
+	      checkBox.ensureDebugId("cwCheckBox-" + day);
+
+	      // Disable the weekends
+	      if (i >= 5) {
+	        checkBox.setEnabled(false);
+	      }
+
+	      vPanel.add(checkBox);
+	    }
+
+	    // Return the panel of checkboxes
+	    return vPanel;
+	  }
+	
 }
