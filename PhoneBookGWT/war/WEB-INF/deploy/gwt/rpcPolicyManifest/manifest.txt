@@ -1,0 +1,3 @@
+# Module gwt
+# RPC service class, partial path of RPC policy file
+polytech.gwt.client.GreetingService, 4D06458C956E7B6E88A08391AA645436.gwt.rpc

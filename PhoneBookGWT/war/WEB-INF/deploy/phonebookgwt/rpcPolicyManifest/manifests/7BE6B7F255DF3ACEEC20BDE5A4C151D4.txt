@@ -1,0 +1,2 @@
+serviceClass: fr.polytech.pooihm.phonebookgwt.client.GreetingService
+path: EB9F4F82E760B14905883CD8121C9626.gwt.rpc
