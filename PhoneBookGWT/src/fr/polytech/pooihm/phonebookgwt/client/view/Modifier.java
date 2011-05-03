@@ -79,7 +79,8 @@ public class Modifier extends Composite {
         ttelbureau = new TextBox();
         ttelbureau.setText("");
         ptelbureau = new HorizontalPanel();
-        ptelbureau.add(new HTML("<p>Téléphone (bureau) : </p>"));
+        htelbureau = new HTML("<p>Téléphone (bureau) : </p>");
+        ptelbureau.add(htelbureau);
         ptelbureau.add(ttelbureau);
         
         ttelmobile = new TextBox();
