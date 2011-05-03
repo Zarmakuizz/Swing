@@ -87,7 +87,7 @@ public class Description extends Composite {
         });
     }
     
-    private void loadDescription(String nom, String prenom){
+    public void loadDescription(String nom, String prenom){
         Contact c = DescriptionControler.getContact(nom, prenom);
         pnom.clear();
         pnom.add(hnom);
