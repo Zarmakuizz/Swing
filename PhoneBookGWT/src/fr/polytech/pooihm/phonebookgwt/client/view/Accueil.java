@@ -1,22 +1,13 @@
 package fr.polytech.pooihm.phonebookgwt.client.view;
 
-import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.ui.CheckBox;
+import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.FlowPanel;
-import com.google.gwt.user.client.ui.HTML;
-import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.ListBox;
-import com.google.gwt.user.client.ui.RadioButton;
 import com.google.gwt.user.client.ui.RootPanel;
-import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.TextBox;
-import com.google.gwt.user.client.ui.Tree;
-import com.google.gwt.user.client.ui.TreeItem;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
 import fr.polytech.pooihm.phonebookgwt.client.PhoneBookGWT;
@@ -76,13 +67,6 @@ public class Accueil extends Composite {
         list = new ListBox();
         list.setVisibleItemCount(10);
         list.setWidth("330px");
-        for (int i = 0; i < 5; i++) {
-            list.addItem("Hap");
-            list.addItem("--- Onche Hapiste");
-            list.addItem("--- Onche Kikoo");
-            list.addItem("Noel");
-            list.addItem("--- Noel");
-        }
 
         // Assemblage de la vue dans le panel principal
         panel = new VerticalPanel();

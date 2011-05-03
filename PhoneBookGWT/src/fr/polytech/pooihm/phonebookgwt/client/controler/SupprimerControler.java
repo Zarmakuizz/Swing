@@ -8,8 +8,8 @@ public class SupprimerControler {
 	
 	private Modele modele;
 	
-	public SupprimerControler() {
-		modele = new Modele();
+	public SupprimerControler(Modele modele) {
+		this.modele = modele;
 	}
 	
 	/**
