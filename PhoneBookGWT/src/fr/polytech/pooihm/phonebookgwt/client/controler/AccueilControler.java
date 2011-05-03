@@ -11,6 +11,7 @@ public class AccueilControler {
 	private Accueil accueil;
 
 	/** initialise et lance la fenetre principale */
+
 	public AccueilControler(Modele modele) {
 		this.modele = modele;
 		accueil = Accueil.getInstance();
