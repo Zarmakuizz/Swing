@@ -21,7 +21,7 @@ import fr.polytech.pooihm.phonebook.PhoneBook;
  * @author namor
  */
 
-public class Modele extends PhoneBook {
+public class Modele extends fr.polytech.pooihm.phonebook.PhoneBook {
 
     /**
      * Renvoit un ArrayList d'ArrayList de string contenant les noms et prénoms
