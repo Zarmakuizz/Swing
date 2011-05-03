@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="26" version="2.0">
+<workbench progressCount="32" version="2.0">
 <workbenchAdvisor/>
-<window height="770" maximized="true" width="1016" x="254" y="106">
+<window height="814" width="1288" x="16" y="77">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -20,7 +20,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.wb.core.guiEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wb.core.guiEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typePlaceholder" x="-1" y="-1"/>
@@ -50,13 +50,17 @@
 <part id="13"/>
 <part id="14"/>
 <part id="15"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
+<part id="19"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="GreetingService.java" partName="GreetingService.java" path="/home/namor/Java/Swing/Gwt/src/polytech/gwt/client/GreetingService.java" title="GreetingService.java" tooltip="Gwt/src/polytech/gwt/client/GreetingService.java" workbook="DefaultEditorWorkbook">
+<editor id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="GreetingService.java" partName="GreetingService.java" path="/home/namor/Java/Swing/Gwt/src/polytech/gwt/client/GreetingService.java" title="GreetingService.java" tooltip="Gwt/src/polytech/gwt/client/GreetingService.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Gwt/src/polytech/gwt/client/GreetingService.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="173" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="197" selectionTopPixel="0"/>
 </editor>
 <editor id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="GreetingServiceAsync.java" partName="GreetingServiceAsync.java" path="/home/namor/Java/Swing/Gwt/src/polytech/gwt/client/GreetingServiceAsync.java" title="GreetingServiceAsync.java" tooltip="Gwt/src/polytech/gwt/client/GreetingServiceAsync.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Gwt/src/polytech/gwt/client/GreetingServiceAsync.java"/>
@@ -64,15 +68,11 @@
 </editor>
 <editor id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="Gwt.java" partName="Gwt.java" path="/home/namor/Java/Swing/Gwt/src/polytech/gwt/client/Gwt.java" title="Gwt.java" tooltip="Gwt/src/polytech/gwt/client/Gwt.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Gwt/src/polytech/gwt/client/Gwt.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="949" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6462" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.ui.DefaultTextEditor" name="Gwt.html" partName="Gwt.html" path="/home/namor/Java/Swing/Gwt/war/Gwt.html" title="Gwt.html" tooltip="Gwt/war/Gwt.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Gwt/war/Gwt.html"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2181" selectionTopPixel="0"/>
-</editor>
-<editor id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="AjouterControler.java" partName="AjouterControler.java" path="/home/namor/Java/Swing/Gwt/src/polytech/gwt/client/controler/AjouterControler.java" title="AjouterControler.java" tooltip="Gwt/src/polytech/gwt/client/controler/AjouterControler.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Gwt/src/polytech/gwt/client/controler/AjouterControler.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 <editor id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="DescriptionControler.java" partName="DescriptionControler.java" path="/home/namor/Java/Swing/Gwt/src/polytech/gwt/client/controler/DescriptionControler.java" title="DescriptionControler.java" tooltip="Gwt/src/polytech/gwt/client/controler/DescriptionControler.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Gwt/src/polytech/gwt/client/controler/DescriptionControler.java"/>
@@ -92,7 +92,7 @@
 </editor>
 <editor id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="Accueil.java" partName="Accueil.java" path="/home/namor/Java/Swing/Gwt/src/polytech/gwt/client/view/Accueil.java" title="Accueil.java" tooltip="Gwt/src/polytech/gwt/client/view/Accueil.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Gwt/src/polytech/gwt/client/view/Accueil.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="620" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="781" selectionTopPixel="0"/>
 </editor>
 <editor id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="Ajouter.java" partName="Ajouter.java" path="/home/namor/Java/Swing/Gwt/src/polytech/gwt/client/view/Ajouter.java" title="Ajouter.java" tooltip="Gwt/src/polytech/gwt/client/view/Ajouter.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Gwt/src/polytech/gwt/client/view/Ajouter.java"/>
@@ -114,16 +114,37 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Swing/src/vue/Accueil.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.wb.core.guiEditor" name="ImageViewer.java" partName="ImageViewer.java" path="/home/namor/Java/Swing/Test/src/com/mycompany/project/client/ImageViewer.java" title="ImageViewer.java" tooltip="Test/src/com/mycompany/project/client/ImageViewer.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Test/src/com/mycompany/project/client/ImageViewer.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="526" selectionTopPixel="0"/>
+<editor id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="AccueilControler.java" partName="AccueilControler.java" path="/home/namor/Java/Swing/Gwt/src/polytech/gwt/client/controler/AccueilControler.java" title="AccueilControler.java" tooltip="Gwt/src/polytech/gwt/client/controler/AccueilControler.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Gwt/src/polytech/gwt/client/controler/AccueilControler.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="38" selectionTopPixel="0"/>
+</editor>
+<editor id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="Accueil.java" partName="Accueil.java" path="/home/namor/Java/Swing/PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/view/Accueil.java" title="Accueil.java" tooltip="PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/view/Accueil.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/view/Accueil.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1165" selectionTopPixel="0"/>
+</editor>
+<editor id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="Modele.java" partName="Modele.java" path="/home/namor/Java/Swing/PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/modele/Modele.java" title="Modele.java" tooltip="PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/modele/Modele.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/modele/Modele.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="119" selectionTopPixel="0"/>
+</editor>
+<editor id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="Ajouter.java" partName="Ajouter.java" path="/home/namor/Java/Swing/PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/view/Ajouter.java" title="Ajouter.java" tooltip="PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/view/Ajouter.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/view/Ajouter.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="3" selectionOffset="36" selectionTopPixel="0"/>
+</editor>
+<editor id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="Contact.java" partName="Contact.java" path="/home/namor/Java/Swing/PhoneBookGWT/src/fr/polytech/pooihm/phonebook/Contact.java" title="Contact.java" tooltip="PhoneBookGWT/src/fr/polytech/pooihm/phonebook/Contact.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebook/Contact.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="PhoneBook.java" partName="PhoneBook.java" path="/home/namor/Java/Swing/PhoneBookGWT/src/fr/polytech/pooihm/phonebook/PhoneBook.java" title="PhoneBook.java" tooltip="PhoneBookGWT/src/fr/polytech/pooihm/phonebook/PhoneBook.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebook/PhoneBook.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="529"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Hierarchy"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>&#x0A;<category IMemento.internal.id="Errors"/>
+<expanded>&#x0A;<category IMemento.internal.id="Warnings (39 items)"/>
+<category IMemento.internal.id="Warnings"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -168,13 +189,15 @@
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
-<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration">
+<viewState/>
+</view>
 <view id="com.google.gwt.eclipse.DevModeView" partName="Development Mode">
 <viewState/>
 </view>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -272,8 +295,8 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.18894331" ratioLeft="270" ratioRight="1159" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.70416665" ratioLeft="507" ratioRight="213" relationship="4" relative="org.eclipse.ui.editorss">
+<info part="org.eclipse.ui.editorss" ratio="0.36" ratioLeft="459" ratioRight="816" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.66519827" ratioLeft="453" ratioRight="228" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
@@ -292,7 +315,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="right" ratio="0.74934036" ratioLeft="568" ratioRight="190" relationship="2" relative="org.eclipse.ui.editorss">
+<info folder="true" part="right" ratio="0.8622754" ratioLeft="864" ratioRight="138" relationship="2" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
@@ -309,20 +332,7 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/Gwt/src/polytech/gwt/Gwt.gwt.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/Gwt/src/polytech/gwt/client/GreetingService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/Gwt/src/polytech/gwt/client/GreetingServiceAsync.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/Gwt/src/polytech/gwt/client/Gwt.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.core.runtime.xml.source" path="/Gwt/src/polytech/gwt/Gwt.gwt.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/Gwt/src/polytech/gwt/client/controler/ModifierControler.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/Gwt/src/polytech/gwt/client/modele/Modele.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/Gwt/src/polytech/gwt/client/view/Accueil.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/Gwt/src/polytech/gwt/client/view/Ajouter.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/Gwt/src/polytech/gwt/client/view/Description.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/Gwt/src/polytech/gwt/client/view/Detail.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/Gwt/src/polytech/gwt/client/view/Modifier.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Swing/src/vue/Accueil.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/Gwt/war/WEB-INF/web.xml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/Gwt/src/polytech/gwt/server/GreetingServiceImpl.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/Gwt/src/polytech/gwt/client/controler/AccueilCOntroler.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/Gwt/src/polytech/gwt/Gwt.gwt.xml"/>
@@ -334,152 +344,170 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wb.core.guiEditor" path="/Test/src/com/mycompany/project/client/ImageViewer.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/Gwt/war/Gwt.html"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/Gwt/src/polytech/gwt/client/GreetingService.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wb.core.guiEditor" path="/Test/src/com/mycompany/project/client/ImageViewer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/Gwt/src/polytech/gwt/client/controler/AjouterControler.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/Test/src/com/mycompany/project/client/ImageViewer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/Gwt/src/polytech/gwt/client/view/Accueil.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/Gwt/src/polytech/gwt/client/controler/AccueilControler.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/Gwt/src/polytech/gwt/client/Gwt.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/Test/src/com/mycompany/project/client/ImageViewer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/view/Accueil.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/controler/AccueilControler.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/controler/AjouterControler.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/controler/DescriptionControler.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/modele/Modele.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/controler/DetailControler.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/view/Ajouter.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebook/Contact.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebook/PhoneBook.java"/>
 </editors>
-<item historyLabel="ModifierControler.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Modele.java" index="6">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Accueil.java" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Ajouter.java" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Description.java" index="9">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Detail.java" index="10">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Modifier.java" index="11">
-<position info="not_deleted" x="61" y="0"/>
-</item>
-<item historyLabel="Gwt.gwt.xml" index="0">
-<position info="not_deleted" x="468" y="0"/>
-</item>
-<item historyLabel="Gwt.gwt.xml" index="4">
-<position info="not_deleted" x="800" y="0"/>
-</item>
-<item historyLabel="Gwt.gwt.xml" index="4">
-<position info="not_deleted" x="393" y="0"/>
-</item>
-<item historyLabel="Gwt.gwt.xml" index="4">
-<position info="not_deleted" x="323" y="0"/>
-</item>
-<item historyLabel="Gwt.gwt.xml" index="4">
-<position info="not_deleted" x="538" y="0"/>
-</item>
-<item historyLabel="Gwt.gwt.xml" index="4">
-<position info="not_deleted" x="468" y="0"/>
-</item>
-<item historyLabel="Accueil.java" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Accueil.java" index="12">
-<position info="not_deleted" x="4" y="0"/>
-</item>
-<item historyLabel="Accueil.java" index="7">
-<position info="not_deleted" x="620" y="0"/>
-</item>
-<item historyLabel="GreetingService.java" index="1">
-<position info="not_deleted" x="173" y="0"/>
-</item>
-<item historyLabel="GreetingServiceAsync.java" index="2">
-<position info="not_deleted" x="279" y="0"/>
-</item>
-<item historyLabel="GreetingService.java" index="1">
-<position info="not_deleted" x="173" y="0"/>
-</item>
-<item historyLabel="GreetingServiceAsync.java" index="2">
-<position info="not_deleted" x="291" y="0"/>
-</item>
-<item historyLabel="Gwt.java" index="3">
-<position info="not_deleted" x="1076" y="0"/>
-</item>
-<item historyLabel="Gwt.java" index="3">
-<position info="not_deleted" x="3019" y="0"/>
-</item>
-<item historyLabel="web.xml" index="13"/>
-<item historyLabel="Gwt.java" index="3">
-<position info="not_deleted" x="3019" y="0"/>
-</item>
-<item historyLabel="GreetingServiceImpl.java" index="14">
-<position/>
-</item>
-<item historyLabel="Gwt.java" index="3">
-<position info="not_deleted" x="940" y="0"/>
-</item>
-<item historyLabel="GreetingServiceImpl.java" index="14">
-<position/>
-</item>
-<item historyLabel="Gwt.java" index="3">
-<position info="not_deleted" x="940" y="0"/>
-</item>
-<item historyLabel="GreetingServiceImpl.java" index="14">
+<item historyLabel="GreetingServiceImpl.java" index="1">
 <position info="not_deleted" x="303" y="0"/>
 </item>
-<item historyLabel="Gwt.java" index="3">
+<item historyLabel="Gwt.java" index="0">
 <position info="not_deleted" x="940" y="0"/>
 </item>
-<item historyLabel="AccueilCOntroler.java" index="15">
+<item historyLabel="AccueilCOntroler.java" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Gwt.java" index="3">
+<item historyLabel="Gwt.java" index="0">
 <position info="not_deleted" x="1024" y="0"/>
 </item>
-<item historyLabel="Gwt.gwt.xml" index="16"/>
-<item historyLabel="Gwt.java" index="3">
+<item historyLabel="Gwt.gwt.xml" index="3"/>
+<item historyLabel="Gwt.java" index="0">
 <position info="not_deleted" x="1024" y="0"/>
 </item>
-<item historyLabel="AccueilControler.java" index="17">
+<item historyLabel="AccueilControler.java" index="4">
 <position info="not_deleted" x="4" y="0"/>
 </item>
-<item historyLabel="AccueilCOntroler.java" index="18">
+<item historyLabel="AccueilCOntroler.java" index="5">
 <position info="not_deleted" x="0" y="1509"/>
 </item>
-<item historyLabel="AccueilControler.java" index="17">
+<item historyLabel="AccueilControler.java" index="4">
 <position info="not_deleted" x="422" y="1553"/>
 </item>
-<item historyLabel="AccueilCOntroler.java" index="18">
+<item historyLabel="AccueilCOntroler.java" index="5">
 <position info="not_deleted" x="0" y="1509"/>
 </item>
-<item historyLabel="AccueilControler.java" index="19">
+<item historyLabel="AccueilControler.java" index="6">
 <position info="not_deleted" x="417" y="0"/>
 </item>
-<item historyLabel="AccueilControler.java" index="17">
+<item historyLabel="AccueilControler.java" index="4">
 <position info="not_deleted" x="422" y="1553"/>
 </item>
-<item historyLabel="Gwt.java" index="3">
+<item historyLabel="Gwt.java" index="0">
 <position info="not_deleted" x="949" y="0"/>
 </item>
-<item historyLabel="GreetingServiceAsync.java" index="20">
+<item historyLabel="GreetingServiceAsync.java" index="7">
 <position info="not_deleted" x="291" y="0"/>
 </item>
-<item historyLabel="Gwt.java" index="3">
+<item historyLabel="Gwt.java" index="0">
 <position info="not_deleted" x="949" y="0"/>
 </item>
-<item historyLabel="Lool.java" index="21">
+<item historyLabel="Lool.java" index="8">
 <position info="not_deleted" x="1172" y="0"/>
 </item>
-<item historyLabel="Gwt.java" index="3">
+<item historyLabel="Gwt.java" index="0">
 <position info="not_deleted" x="949" y="0"/>
 </item>
-<item historyLabel="ImageViewer.java" index="22">
+<item historyLabel="ImageViewer.java" index="9">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="ImageViewer.java" index="22">
+<item historyLabel="ImageViewer.java" index="9">
 <position info="not_deleted" x="562" y="0"/>
 </item>
-<item historyLabel="ImageViewer.java" index="22">
+<item historyLabel="ImageViewer.java" index="9">
 <position info="not_deleted" x="526" y="0"/>
 </item>
-<item historyLabel="Gwt.html" index="23">
+<item historyLabel="Gwt.html" index="10">
 <position info="not_deleted" x="2181" y="0"/>
 </item>
-<item active="true" historyLabel="GreetingService.java" index="24">
+<item historyLabel="GreetingService.java" index="11">
 <position info="not_deleted" x="173" y="0"/>
+</item>
+<item historyLabel="ImageViewer.java" index="12">
+<position info="not_deleted" x="552" y="0"/>
+</item>
+<item historyLabel="GreetingService.java" index="11">
+<position info="not_deleted" x="173" y="0"/>
+</item>
+<item historyLabel="AjouterControler.java" index="13">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ImageViewer.java" index="14">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AjouterControler.java" index="13">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="GreetingService.java" index="11">
+<position info="not_deleted" x="363" y="0"/>
+</item>
+<item historyLabel="Accueil.java" index="15">
+<position info="not_deleted" x="620" y="0"/>
+</item>
+<item historyLabel="AccueilControler.java" index="16">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Gwt.java" index="17">
+<position info="not_deleted" x="1128" y="0"/>
+</item>
+<item historyLabel="ImageViewer.java" index="18">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Gwt.java" index="17">
+<position info="not_deleted" x="1128" y="0"/>
+</item>
+<item historyLabel="Gwt.java" index="17">
+<position info="not_deleted" x="6146" y="0"/>
+</item>
+<item historyLabel="Accueil.java" index="19">
+<position info="not_deleted" x="904" y="0"/>
+</item>
+<item historyLabel="AccueilControler.java" index="20">
+<position info="not_deleted" x="59" y="0"/>
+</item>
+<item historyLabel="Accueil.java" index="19">
+<position info="not_deleted" x="904" y="0"/>
+</item>
+<item historyLabel="AjouterControler.java" index="21">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Accueil.java" index="19">
+<position info="not_deleted" x="904" y="0"/>
+</item>
+<item historyLabel="DescriptionControler.java" index="22">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Accueil.java" index="19">
+<position info="not_deleted" x="904" y="0"/>
+</item>
+<item historyLabel="Modele.java" index="23">
+<position info="not_deleted" x="4" y="0"/>
+</item>
+<item historyLabel="Accueil.java" index="19">
+<position info="not_deleted" x="1165" y="0"/>
+</item>
+<item historyLabel="Modele.java" index="23">
+<position info="not_deleted" x="1896" y="0"/>
+</item>
+<item historyLabel="DetailControler.java" index="24">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Modele.java" index="23">
+<position info="not_deleted" x="1896" y="0"/>
+</item>
+<item historyLabel="Ajouter.java" index="25">
+<position info="not_deleted" x="36" y="3"/>
+</item>
+<item historyLabel="Modele.java" index="23">
+<position info="not_deleted" x="119" y="0"/>
+</item>
+<item historyLabel="Contact.java" index="26">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="PhoneBook.java" index="27">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -498,8 +526,38 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wb.core.guiEditor" name="ImageViewer.java" tooltip="Test/src/com/mycompany/project/client/ImageViewer.java">
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="PhoneBook.java" tooltip="PhoneBookGWT/src/fr/polytech/pooihm/phonebook/PhoneBook.java">
+<persistable path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebook/PhoneBook.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="Contact.java" tooltip="PhoneBookGWT/src/fr/polytech/pooihm/phonebook/Contact.java">
+<persistable path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebook/Contact.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="Ajouter.java" tooltip="PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/view/Ajouter.java">
+<persistable path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/view/Ajouter.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="DetailControler.java" tooltip="PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/controler/DetailControler.java">
+<persistable path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/controler/DetailControler.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="Modele.java" tooltip="PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/modele/Modele.java">
+<persistable path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/modele/Modele.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="DescriptionControler.java" tooltip="PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/controler/DescriptionControler.java">
+<persistable path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/controler/DescriptionControler.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="AjouterControler.java" tooltip="PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/controler/AjouterControler.java">
+<persistable path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/controler/AjouterControler.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="AccueilControler.java" tooltip="PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/controler/AccueilControler.java">
+<persistable path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/controler/AccueilControler.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="Accueil.java" tooltip="PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/view/Accueil.java">
+<persistable path="/PhoneBookGWT/src/fr/polytech/pooihm/phonebookgwt/client/view/Accueil.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="ImageViewer.java" tooltip="Test/src/com/mycompany/project/client/ImageViewer.java">
 <persistable path="/Test/src/com/mycompany/project/client/ImageViewer.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="AccueilControler.java" tooltip="Gwt/src/polytech/gwt/client/controler/AccueilControler.java">
+<persistable path="/Gwt/src/polytech/gwt/client/controler/AccueilControler.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="Lool.java" tooltip="lool/src/lool/client/Lool.java">
 <persistable path="/lool/src/lool/client/Lool.java"/>
@@ -512,36 +570,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="Gwt.gwt.xml" tooltip="Gwt/src/polytech/gwt/Gwt.gwt.xml">
 <persistable path="/Gwt/src/polytech/gwt/Gwt.gwt.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="GreetingServiceImpl.java" tooltip="Gwt/src/polytech/gwt/server/GreetingServiceImpl.java">
-<persistable path="/Gwt/src/polytech/gwt/server/GreetingServiceImpl.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="web.xml" tooltip="Gwt/war/WEB-INF/web.xml">
-<persistable path="/Gwt/war/WEB-INF/web.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Accueil.java" tooltip="Swing/src/vue/Accueil.java">
-<persistable path="/Swing/src/vue/Accueil.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="Modifier.java" tooltip="Gwt/src/polytech/gwt/client/view/Modifier.java">
-<persistable path="/Gwt/src/polytech/gwt/client/view/Modifier.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="Detail.java" tooltip="Gwt/src/polytech/gwt/client/view/Detail.java">
-<persistable path="/Gwt/src/polytech/gwt/client/view/Detail.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="Description.java" tooltip="Gwt/src/polytech/gwt/client/view/Description.java">
-<persistable path="/Gwt/src/polytech/gwt/client/view/Description.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="Ajouter.java" tooltip="Gwt/src/polytech/gwt/client/view/Ajouter.java">
-<persistable path="/Gwt/src/polytech/gwt/client/view/Ajouter.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="Accueil.java" tooltip="Gwt/src/polytech/gwt/client/view/Accueil.java">
-<persistable path="/Gwt/src/polytech/gwt/client/view/Accueil.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="Modele.java" tooltip="Gwt/src/polytech/gwt/client/modele/Modele.java">
-<persistable path="/Gwt/src/polytech/gwt/client/modele/Modele.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.google.gwt.eclipse.core.editors.gwtJavaEditor" name="ModifierControler.java" tooltip="Gwt/src/polytech/gwt/client/controler/ModifierControler.java">
-<persistable path="/Gwt/src/polytech/gwt/client/controler/ModifierControler.java"/>
 </file>
 </mruList>
 </workbench>

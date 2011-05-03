@@ -155,7 +155,19 @@ public class Gwt implements EntryPoint {
 		sendButton.addClickHandler(handler);
 		nameField.addKeyUpHandler(handler);
 		
+		/********** Bouton *****************/
+		// Make a new button that does something when you click it.
+	    Button b = new Button("Jump!", new ClickHandler() {
+	      public void onClick(ClickEvent event) {
+	        Window.alert("Oh !");
+	      }
+	    });
 
+	    // Add it to the root panel.
+	    RootPanel.get().add(b);
+	    /***********************************/
+	    Widget w = onInitialize();
+	    dialogVPanel.add(w);
 	}	
 	
 	

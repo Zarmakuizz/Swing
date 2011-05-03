@@ -7,3 +7,4 @@ bin
 ant.sh
 war/WEB-INF/deploy/phonebookgwt/symbolMaps/*
 *~
+war/WEB-INF/deploy/phonebookgwt/symbolMaps/*
