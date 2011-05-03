@@ -13,6 +13,7 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 
 import fr.polytech.pooihm.phonebook.Contact;
 import fr.polytech.pooihm.phonebookgwt.client.PhoneBookGWT;
+import fr.polytech.pooihm.phonebookgwt.client.controler.AccueilControler;
 import fr.polytech.pooihm.phonebookgwt.client.controler.DescriptionControler;
 import fr.polytech.pooihm.phonebookgwt.client.controler.ModifierControler;
 
@@ -118,6 +119,7 @@ public class Modifier extends Composite {
                 PhoneBookGWT.MESSAGE.setHTML("Le contact a bien été modifié.");
                 RootPanel.get("message").add(PhoneBookGWT.MESSAGE);
                 RootPanel.get("display").add(PhoneBookGWT.ACCUEIL);
+                AccueilControler.refresh();
             }
         });
         annuler.addClickHandler(new ClickHandler() {
