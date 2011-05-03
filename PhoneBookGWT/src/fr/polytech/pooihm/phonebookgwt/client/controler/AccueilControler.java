@@ -1,6 +1,6 @@
 package fr.polytech.pooihm.phonebookgwt.client.controler;
 
-import fr.polytech.pooihm.phonebook.GroupNotDefinedException;
+import fr.polytech.pooihm.phonebookgwt.client.modele.Exception;
 import fr.polytech.pooihm.phonebookgwt.client.modele.Modele;
 import fr.polytech.pooihm.phonebookgwt.client.view.Accueil;
 
@@ -55,5 +55,19 @@ public class AccueilControler {
 	public void selectionGroupe() {
 
 	}
+	
+    /**
+     * On supprime un contact par son nom et prénom (la ligne affichée sur l'accueil)
+     * @param line
+     * @throws Exception
+     */
+    public void deleteContact(String line) throws Exception{
+    	//on vérifie que la ligne est bien celle d'un contact valide --Prénom Nom
+    	if(line.startsWith("--") && line.contains(" ")){
+    		line = line.substring(2, line.length());
+    		String prenom = line.substring(0, line.)
+    	}
+    	else throw new Exception("deletion failed");
+    }
 
 }

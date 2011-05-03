@@ -4,14 +4,12 @@
 package fr.polytech.pooihm.phonebookgwt.client.modele;
 
 import java.util.ArrayList;
-import java.util.Enumeration;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Set;
 
 import fr.polytech.pooihm.phonebook.Contact;
 import fr.polytech.pooihm.phonebook.GroupNotDefinedException;
-import fr.polytech.pooihm.phonebook.PhoneBook;
+import fr.polytech.pooihm.phonebook.Person;
 
 /**
  * Cette classe fait la jonction entre le modèle livré et l'architecture MVC à
@@ -22,6 +20,8 @@ import fr.polytech.pooihm.phonebook.PhoneBook;
  */
 
 public class Modele extends fr.polytech.pooihm.phonebook.PhoneBook {
+	
+	public static final String ALL_CONTACTS_GROUP_NAME = "Tous les contacts";
 
     /**
      * Renvoit un ArrayList d'ArrayList de string contenant les noms et prénoms
@@ -45,8 +45,9 @@ public class Modele extends fr.polytech.pooihm.phonebook.PhoneBook {
 	/**
 	 * Renvoit une ArrayList de chaque groupe, contenant une ArrayList de chaque
 	 * personne, contenant une ArrayList avec en 0 le prénom et en 1 le nom
+	 * Méthode très lourde
 	 * 
-	 * @return
+	 * @return groupes
 	 * @throws GroupNotDefinedException
 	 */
     public ArrayList<ArrayList<ArrayList<String>>> getAllGroupsPersons()
@@ -68,7 +69,10 @@ public class Modele extends fr.polytech.pooihm.phonebook.PhoneBook {
         return groupes;
     }
     
-    
+    /**
+     * Renvoit la liste des noms de groupes
+     * @return groupes les noms des groupes existants
+     */
     public ArrayList<String> getGroupes() {
         ArrayList<String> groupes = new ArrayList<String>();
         Iterator iter = ((Set<String>) getGroupNames()).iterator();
@@ -78,11 +82,48 @@ public class Modele extends fr.polytech.pooihm.phonebook.PhoneBook {
         return groupes;
     }
     
-    
-    public ArrayList<String> getAffichage(){
-    	
+    /**
+     * Renvoit un ArrayList de String contenant chacune des lignes à afficher sur l'accueil
+     * @return affichage l'affichage de la liste à raffraichir
+     * @throws GroupNotDefinedException 
+     */
+    public ArrayList<String> getAffichage(String groupStar) throws GroupNotDefinedException{
+    	ArrayList<String> affichage = new ArrayList<String>();
+        // On parcourt les groupes
+        for(String gr : getGroupes()) {
+        	//groupe ajouté
+        	affichage.add(gr);
+        	//Si le groupe est étendu
+        	if(gr.equals(groupStar)){
+	            // On parcourt les personnes
+	            for (Contact c : getContactsByGroup(gr)) {
+	                affichage.add("--"+c.getPerson().getFirstname()+" "+c.getPerson().getLastname());
+	            }
+        	}
+        }
+        return affichage;
     }
-    
-    
-    
+
+	/**
+	 * Permet d'obtenir un objet contact à partir du prénom et nom
+	 * 
+	 * @param firstName
+	 *            le prénom
+	 * @param lastName
+	 *            le nom
+	 * @return contact le contact
+	 */
+	public Contact getContactFromNames(String firstName, String lastName) {
+		Person person = new Person(firstName, lastName);
+		Contact contact = null;
+		for (Contact c : getAllContacts()) {
+			if (c.getPerson().getFirstname().toLowerCase().equals(
+					person.getFirstname().toLowerCase())
+					&& c.getPerson().getLastname().toLowerCase().equals(
+							person.getLastname().toLowerCase()))
+				contact = c;
+		}
+		return contact;
+	}
+
 }
