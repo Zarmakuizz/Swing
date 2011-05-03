@@ -1,22 +1,13 @@
 package fr.polytech.pooihm.phonebookgwt.client.view;
 
-import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.ui.CheckBox;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.FlowPanel;
-import com.google.gwt.user.client.ui.HTML;
-import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.ListBox;
-import com.google.gwt.user.client.ui.RadioButton;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.TextBox;
-import com.google.gwt.user.client.ui.Tree;
-import com.google.gwt.user.client.ui.TreeItem;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
 import fr.polytech.pooihm.phonebookgwt.client.PhoneBookGWT;
@@ -40,7 +31,7 @@ public class Accueil extends Composite {
     private HorizontalPanel pBoutons;
     /** Retient le groupe consulté par l'utilisateur. */
     private String groupeConsulte;
-    
+
     /**
      * L'instance d'Accueil, en private conformément au SingletonPattern.
      */
@@ -75,7 +66,8 @@ public class Accueil extends Composite {
         // Préparation de la liste des groupes et contacts
         list = new ListBox();
         list.setVisibleItemCount(10);
-        list.setWidth("330px");
+        list.setWidth("350px");
+        
         for (int i = 0; i < 5; i++) {
             list.addItem("Hap");
             list.addItem("--- Onche Hapiste");
@@ -196,26 +188,5 @@ public class Accueil extends Composite {
      */
     public static Accueil getInstance() {
         return accueilPrivate;
-    }
-    
-    /**
-     * Remet la liste à vide
-     */
-    public void resetList(){
-    	panel.remove(list);
-    	list = new ListBox();
-        list.setVisibleItemCount(10);
-        list.setWidth("350px");
-    	panel.add(list);
-    }
-    
-    /**
-     * Ajoute un contact dans la liste
-     * @param contact
-     */
-    public void addContact(String contact){
-    	panel.remove(list);
-    	list.addItem(contact);
-    	panel.add(list);
     }
 }

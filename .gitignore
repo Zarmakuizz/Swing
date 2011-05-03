@@ -5,6 +5,7 @@
 !.project
 bin
 ant.sh
+*.class
 war/WEB-INF/deploy/phonebookgwt/symbolMaps/*
 Toasty/*
 Toastyttt
