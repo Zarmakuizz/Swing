@@ -5,4 +5,8 @@
 <fullyQualifiedTypeName name="com.google.gwt.user.client.ui.FlowPanel"/>
 <fullyQualifiedTypeName name="com.google.gwt.user.client.ui.RootPanel"/>
 <fullyQualifiedTypeName name="polytech.gwt.client.view.Accueil"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.client.ui.Widget"/>
+<fullyQualifiedTypeName name="com.google.gwt.i18n.client.Constants"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.client.ui.CheckBox"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.client.Window"/>
 </qualifiedTypeNameHistroy>
