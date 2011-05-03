@@ -8,7 +8,7 @@ import fr.polytech.pooihm.phonebookgwt.client.view.Description;
 public class DescriptionControler {
 	
 	/** Partie modèle */
-	private Modele modele;
+	private static Modele modele;
 	/** La fenêtere d'accueil */
 	private Description description;
 	
@@ -17,7 +17,7 @@ public class DescriptionControler {
 		description = Description.getInstance();
 	}
 	
-	public Contact getContact(String nom, String prenom){
+	public static Contact getContact(String nom, String prenom){
 	    return modele.getContactFromNames(nom, prenom);
 	}
 }
