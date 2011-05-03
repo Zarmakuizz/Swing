@@ -6,5 +6,8 @@
 bin
 ant.sh
 war/WEB-INF/deploy/phonebookgwt/symbolMaps/*
+Toasty/*
+Toastyttt
+Toastyttt/*
 *~
-Toasty
+war/WEB-INF/deploy/phonebookgwt/symbolMaps/*

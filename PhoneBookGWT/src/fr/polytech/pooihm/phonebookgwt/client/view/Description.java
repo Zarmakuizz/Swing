@@ -54,6 +54,7 @@ public class Description extends Composite {
         ptelmobile.add(new HTML("<p>Téléphone (mobile) : $variable</p>"));
         
         quitter = new Button("Quitter");
+        initDescription();
         
         panel.add(pnom);
         panel.add(pprenom);

@@ -81,6 +81,7 @@ public class Modifier extends Composite {
         
         modifier = new Button("Modifier");
         annuler = new Button("Annuler");
+        initModifier();
         
         panel.add(pnom);
         panel.add(pprenom);

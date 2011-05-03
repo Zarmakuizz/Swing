@@ -78,6 +78,7 @@ public class Ajouter extends Composite {
         
         ajout = new Button("Ajouter");
         annul = new Button("Annuler");
+        initAjouter();
         
         panel.add(pnom);
         panel.add(pprenom);

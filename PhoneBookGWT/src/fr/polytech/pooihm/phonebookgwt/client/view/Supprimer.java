@@ -45,6 +45,7 @@ public class Supprimer extends Composite {
         
         confirmer = new Button("Supprimer");
         annuler = new Button("Annuler");
+        initSupprimer();
         
         panel.add(new HTML("<p>Êtes-vous sûr de vouloir supprimer ce contact ?</p>"));
         panel.add(confirmer);

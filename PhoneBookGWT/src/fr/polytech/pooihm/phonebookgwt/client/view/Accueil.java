@@ -47,7 +47,7 @@ public class Accueil extends Composite {
      * Génère la vue Accueil.
      */
     private Accueil() {
-        groupeConsulte = fr.polytech.pooihm.phonebookgwt.modele.ALL_CONTACTS_GROUP_NAME;
+        groupeConsulte = fr.polytech.pooihm.phonebookgwt.client.modele.Modele.ALL_CONTACTS_GROUP_NAME;
         add = new Button();
         add.setText("Ajouter");
         mod = new Button();
@@ -56,7 +56,8 @@ public class Accueil extends Composite {
         desc.setText("Description");
         supp = new Button();
         supp.setText("Supprimer");
-
+        
+        initAccueil();
         pBoutons = new HorizontalPanel();
         pBoutons.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
         pBoutons.add(add);
