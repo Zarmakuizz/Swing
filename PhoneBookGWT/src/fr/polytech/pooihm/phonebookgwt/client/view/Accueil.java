@@ -9,6 +9,7 @@ import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.server.rpc.UnexpectedException;
 
 import fr.polytech.pooihm.phonebookgwt.client.PhoneBookGWT;
 
@@ -97,7 +98,14 @@ public class Accueil extends Composite {
         mod.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
-                if (isSelectedLineAContact()) {
+                String ligne;
+                try {
+                    ligne = getSelectedText();
+                } catch (IndexOutOfBoundsException e) {
+                    ligne = "";
+                }
+                // Si la ligne sélectionnée est un contact
+                if (ligne.startsWith("--")) {
                     RootPanel.get("display").remove(PhoneBookGWT.ACCUEIL);
                     // Enlever l'ancien message affiché, s'il y en avait un
                     RootPanel.get("message").remove(PhoneBookGWT.MESSAGE);
@@ -119,17 +127,25 @@ public class Accueil extends Composite {
         desc.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
-                if (isSelectedLineAContact()) {
+                String ligne;
+                try {
+                    ligne = getSelectedText();
+                } catch (IndexOutOfBoundsException e) {
+                    ligne = "";
+                }
+                // Si la ligne sélectionnée est un contact
+                if (ligne.startsWith("--")) {
                     RootPanel.get("display").remove(PhoneBookGWT.ACCUEIL);
                     // Enlever le message précédemment affiché, s'il y en avait
                     // un
                     RootPanel.get("message").remove(PhoneBookGWT.MESSAGE);
                     PhoneBookGWT.MESSAGE.setHTML(" ");
                     RootPanel.get("message").add(PhoneBookGWT.MESSAGE);
-                    
-                    String text = getSelectedText();
-                    String[] textes = text.split(" ");
-                    PhoneBookGWT.DESCRIPTION.loadDescription(textes[0], textes[1]);
+                    RootPanel.get("display").add(PhoneBookGWT.DESCRIPTION);
+
+                    String[] textes = ligne.substring(2).split(" ");
+                    PhoneBookGWT.DESCRIPTION.loadDescription(textes[0],
+                            textes[1]);
                     RootPanel.get("display").add(PhoneBookGWT.DESCRIPTION);
                 } else {
                     RootPanel.get("message").remove(PhoneBookGWT.MESSAGE);
@@ -143,15 +159,23 @@ public class Accueil extends Composite {
         supp.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
-                if (isSelectedLineAContact()) {
+                String ligne;
+                try {
+                    ligne = getSelectedText();
+                } catch (IndexOutOfBoundsException e) {
+                    ligne = "";
+                }
+                // Si la ligne sélectionnée est un contact
+                if (ligne.startsWith("--")) {
                     RootPanel.get("display").remove(PhoneBookGWT.ACCUEIL);
                     // Enlever le message précédemment affiché, s'il y en avait
                     // un
                     RootPanel.get("message").remove(PhoneBookGWT.MESSAGE);
                     PhoneBookGWT.MESSAGE.setHTML(" ");
                     RootPanel.get("message").add(PhoneBookGWT.MESSAGE);
+                    PhoneBookGWT.SUPPRIMER.setMemberToDelete(list
+                            .getItemText(list.getSelectedIndex()));
                     RootPanel.get("display").add(PhoneBookGWT.SUPPRIMER);
-                    PhoneBookGWT.SUPPRIMER.setMemberToDelete(list.getItemText(list.getSelectedIndex()));
                 } else {
                     RootPanel.get("message").remove(PhoneBookGWT.MESSAGE);
                     PhoneBookGWT.MESSAGE
@@ -161,33 +185,20 @@ public class Accueil extends Composite {
             }
         });
     }
+
     /**
-     * Obtenir le texte de la ligne sélectionné. Enlève "l'indentation" pour les contacts
+     * Obtenir le texte de la ligne sélectionné.
+     * 
      * @return String
      */
-    public String getSelectedText(){
+    public String getSelectedText() throws IndexOutOfBoundsException {
         int index = list.getSelectedIndex();
         if (index == -1)
-            return ""; 
+            throw new RuntimeException();
+        else
+            list.setSelectedIndex(index);
         String ligne = list.getItemText(index);
-        if (ligne.startsWith("--- ")){
-            ligne = ligne.substring(4);
-        }
         return ligne;
-    }
-    /**
-     * Détermine si la ligne sélectionnée dans la ListBox est celle d'un
-     * contact.
-     * 
-     * @return boolean false si aucun élément n'est sélectionné ou si l'élément
-     *         sélectionné correspond à un groupe.
-     */
-    public boolean isSelectedLineAContact() {
-        int index = list.getSelectedIndex();
-        if (index == -1)
-            return false;
-        String ligne = list.getItemText(index);
-        return ligne.startsWith("--");
     }
 
     /**
@@ -199,25 +210,26 @@ public class Accueil extends Composite {
     public static Accueil getInstance() {
         return accueilPrivate;
     }
-    
+
     /**
      * Remet la liste à vide
      */
-    public void resetList(){
-    	panel.remove(list);
-    	list = new ListBox();
+    public void resetList() {
+        panel.remove(list);
+        list = new ListBox();
         list.setVisibleItemCount(10);
         list.setWidth("350px");
-    	panel.add(list);
+        panel.add(list);
     }
-    
+
     /**
      * Ajoute un contact dans la liste
+     * 
      * @param contact
      */
-    public void addContact(String contact){
-    	panel.remove(list);
-    	list.addItem(contact);
-    	panel.add(list);
+    public void addContact(String contact) {
+        panel.remove(list);
+        list.addItem(contact);
+        panel.add(list);
     }
 }
