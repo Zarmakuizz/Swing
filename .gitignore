@@ -5,7 +5,7 @@
 !.project
 bin
 ant.sh
-*.class
+PhoneBookGWT/war/WEB-INF/classes/fr/polytech/pooihm/phonebookgwt/client/*.class
 war/WEB-INF/deploy/phonebookgwt/symbolMaps/*
 Toasty/*
 Toastyttt

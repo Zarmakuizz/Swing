@@ -13,7 +13,12 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 
 import fr.polytech.pooihm.phonebookgwt.client.PhoneBookGWT;
 
-
+/**
+ * Définit la vue d'ajout de contact pour l'application.
+ * Cette classe utilise le SingletonPattern.
+ * @author Guy Champollion
+ * @author Roman Mkrtchian
+ */
 public class Ajouter extends Composite {
     /** Le panel central */
     private VerticalPanel panel;
@@ -26,7 +31,6 @@ public class Ajouter extends Composite {
     private Button ajout;
     /** Le bouton pour ne pas faire de modification et revenir à l'accueil */
     private Button annul;
-    
     
     private static final Ajouter ajouterPrivate = new Ajouter();
     /**
