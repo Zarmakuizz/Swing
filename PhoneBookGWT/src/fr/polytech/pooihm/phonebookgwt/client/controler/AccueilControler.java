@@ -6,9 +6,9 @@ import fr.polytech.pooihm.phonebookgwt.client.view.Accueil;
 
 public class AccueilControler {
 	/** Partie modèle */
-	private Modele modele;
+	private static Modele modele;
 	/** La fenêtere d'accueil */
-	private Accueil accueil;
+	private static Accueil accueil;
 
 	/** initialise et lance la fenetre principale */
 
@@ -21,7 +21,7 @@ public class AccueilControler {
 	 * Rafraichit la vue principale
 	 * @throws GroupNotDefinedException 
 	 */
-	public void refresh(){
+	public static void refresh(){
 		accueil.resetList();
 		try {
 			for(String contact : modele.getAffichage(Modele.ALL_CONTACTS_GROUP_NAME)){

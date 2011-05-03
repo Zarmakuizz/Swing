@@ -1,12 +1,14 @@
 package fr.polytech.pooihm.phonebookgwt.client.controler;
 
+import com.google.gwt.user.client.ui.RootPanel;
+
 import fr.polytech.pooihm.phonebook.Contact;
+import fr.polytech.pooihm.phonebookgwt.client.PhoneBookGWT;
 import fr.polytech.pooihm.phonebookgwt.client.modele.Modele;
-import fr.polytech.pooihm.phonebookgwt.client.view.Accueil;
 
 public class SupprimerControler {
 	
-	private Modele modele;
+	private static Modele modele;
 	
 	public SupprimerControler(Modele modele) {
 		this.modele = modele;
@@ -19,7 +21,7 @@ public class SupprimerControler {
 	 * @param line la ligne qu'on traite
 	 * @throws Exception
 	 */
-	public void deleteContact(String line) throws Exception {
+	public static void deleteContact(String line) throws Exception {
 		Contact aSupprimer = modele.getContactFromNames(Control.getFirstNameFromLine(line), Control.getLastNameFromLine(line));
 		modele.deleteContact(aSupprimer);
 	}

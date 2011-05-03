@@ -10,6 +10,8 @@ import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
 import fr.polytech.pooihm.phonebookgwt.client.PhoneBookGWT;
+import fr.polytech.pooihm.phonebookgwt.client.controler.AccueilControler;
+import fr.polytech.pooihm.phonebookgwt.client.controler.SupprimerControler;
 
 public class Supprimer extends Composite {
     /** Le panel central */
@@ -21,6 +23,7 @@ public class Supprimer extends Composite {
     
     
     private static final Supprimer supprimerPrivate = new Supprimer();
+    private static String member;
     /**
      * Renvoit le bouton de confirmation de suppression
      * @return Button le bouton de confirmation de suppression
@@ -63,12 +66,24 @@ public class Supprimer extends Composite {
         confirmer.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
-                RootPanel.get("display").remove(PhoneBookGWT.SUPPRIMER);
-                // Confirmer l'action de l'utilisateur
-                RootPanel.get("message").remove(PhoneBookGWT.MESSAGE);
-                PhoneBookGWT.MESSAGE.setHTML("Le contact a bien été supprimé.");
-                RootPanel.get("message").add(PhoneBookGWT.MESSAGE);
-                RootPanel.get("display").add(PhoneBookGWT.ACCUEIL);
+				try {
+					SupprimerControler.deleteContact(member);
+
+					RootPanel.get("display").remove(PhoneBookGWT.SUPPRIMER);
+					// Confirmer l'action de l'utilisateur
+					RootPanel.get("message").remove(PhoneBookGWT.MESSAGE);
+					PhoneBookGWT.MESSAGE
+							.setHTML("Le contact a bien été supprimé.");
+					RootPanel.get("message").add(PhoneBookGWT.MESSAGE);
+				} catch (Exception e) {
+					RootPanel.get("display").remove(PhoneBookGWT.SUPPRIMER);
+					/*RootPanel.get("message").remove(PhoneBookGWT.MESSAGE);
+					PhoneBookGWT.MESSAGE
+							.setHTML("Il y a eu un problème.");
+					RootPanel.get("message").add(PhoneBookGWT.MESSAGE);*/
+				}
+				RootPanel.get("display").add(PhoneBookGWT.ACCUEIL);
+				AccueilControler.refresh();
             }
         });
         annuler.addClickHandler(new ClickHandler() {
@@ -78,5 +93,9 @@ public class Supprimer extends Composite {
                 RootPanel.get("display").add(PhoneBookGWT.ACCUEIL);
             }
         });
+    }
+    
+    public static void setMemberToDelete(String m){
+    	member = m;
     }
 }

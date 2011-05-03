@@ -16,7 +16,7 @@ public class Control {
 		// on vérifie que la ligne est bien celle d'un contact valide --Prénom Nom
 		if (line.startsWith("--") && line.contains(" ")) {
 			line = line.substring(2, line.length());
-			prenom = line.substring(0, line.indexOf(" ") - 1);
+			prenom = line.substring(0, line.indexOf(" "));
 		} else
 			throw new Exception("deletion failed");
 		return prenom;

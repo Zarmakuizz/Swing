@@ -147,6 +147,7 @@ public class Accueil extends Composite {
                     PhoneBookGWT.MESSAGE.setHTML(" ");
                     RootPanel.get("message").add(PhoneBookGWT.MESSAGE);
                     RootPanel.get("display").add(PhoneBookGWT.SUPPRIMER);
+                    PhoneBookGWT.SUPPRIMER.setMemberToDelete(list.getItemText(list.getSelectedIndex()));
                 } else {
                     RootPanel.get("message").remove(PhoneBookGWT.MESSAGE);
                     PhoneBookGWT.MESSAGE
@@ -169,7 +170,7 @@ public class Accueil extends Composite {
         if (index == -1)
             return false;
         String ligne = list.getItemText(index);
-        return ligne.startsWith("--- ");
+        return ligne.startsWith("--");
     }
 
     /**

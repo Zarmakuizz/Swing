@@ -7,9 +7,13 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Set;
 
+import com.google.gwt.user.client.ui.RootPanel;
+
 import fr.polytech.pooihm.phonebook.Contact;
 import fr.polytech.pooihm.phonebook.GroupNotDefinedException;
 import fr.polytech.pooihm.phonebook.Person;
+import fr.polytech.pooihm.phonebookgwt.client.PhoneBookGWT;
+import fr.polytech.pooihm.phonebookgwt.client.controler.Control;
 
 /**
  * Cette classe fait la jonction entre le modèle livré et l'architecture MVC à
@@ -123,11 +127,12 @@ public class Modele extends fr.polytech.pooihm.phonebook.PhoneBook {
 	public Contact getContactFromNames(String firstName, String lastName) {
 		Person person = new Person(firstName, lastName);
 		Contact contact = null;
+		
 		for (Contact c : getAllContacts()) {
 			if (c.getPerson().getFirstname().toLowerCase().equals(
 					person.getFirstname().toLowerCase())
-					&& c.getPerson().getLastname().toLowerCase().equals(
-							person.getLastname().toLowerCase()))
+					/*&& c.getPerson().getLastname().toLowerCase().equals(
+							person.getLastname().toLowerCase())*/)
 				contact = c;
 		}
 		return contact;
