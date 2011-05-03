@@ -1,28 +1,21 @@
 package fr.polytech.pooihm.phonebookgwt.client;
 
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.RootPanel;
+
 import fr.polytech.pooihm.phonebookgwt.client.controler.AccueilControler;
+import fr.polytech.pooihm.phonebookgwt.client.controler.AjouterControler;
+import fr.polytech.pooihm.phonebookgwt.client.controler.DescriptionControler;
+import fr.polytech.pooihm.phonebookgwt.client.controler.ModifierControler;
+import fr.polytech.pooihm.phonebookgwt.client.controler.SupprimerControler;
 import fr.polytech.pooihm.phonebookgwt.client.modele.Modele;
 import fr.polytech.pooihm.phonebookgwt.client.view.Accueil;
 import fr.polytech.pooihm.phonebookgwt.client.view.Ajouter;
-import fr.polytech.pooihm.phonebookgwt.client.view.Modifier;
 import fr.polytech.pooihm.phonebookgwt.client.view.Description;
+import fr.polytech.pooihm.phonebookgwt.client.view.Modifier;
 import fr.polytech.pooihm.phonebookgwt.client.view.Supprimer;
-import fr.polytech.pooihm.phonebookgwt.shared.FieldVerifier;
-import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.core.client.GWT;
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.event.dom.client.KeyCodes;
-import com.google.gwt.event.dom.client.KeyUpEvent;
-import com.google.gwt.event.dom.client.KeyUpHandler;
-import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.DialogBox;
-import com.google.gwt.user.client.ui.HTML;
-import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.RootPanel;
-import com.google.gwt.user.client.ui.TextBox;
-import com.google.gwt.user.client.ui.VerticalPanel;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
@@ -80,6 +73,10 @@ public class PhoneBookGWT implements EntryPoint {
     	modele = new Modele();
     	//controlers
     	AccueilControler accueilControler = new AccueilControler(modele);
+    	AjouterControler ajouterControler = new AjouterControler(modele);
+    	DescriptionControler descriptionControler = new DescriptionControler(modele);
+    	ModifierControler modifierControler = new ModifierControler(modele);
+    	SupprimerControler supprimerControler = new SupprimerControler(modele);
     	accueilControler.refresh();
     	
     	
