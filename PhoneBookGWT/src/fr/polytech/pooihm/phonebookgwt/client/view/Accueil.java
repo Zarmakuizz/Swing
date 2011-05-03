@@ -126,6 +126,10 @@ public class Accueil extends Composite {
                     RootPanel.get("message").remove(PhoneBookGWT.MESSAGE);
                     PhoneBookGWT.MESSAGE.setHTML(" ");
                     RootPanel.get("message").add(PhoneBookGWT.MESSAGE);
+                    
+                    String text = getSelectedText();
+                    String[] textes = text.split(" ");
+                    PhoneBookGWT.DESCRIPTION.loadDescription(textes[0], textes[1]);
                     RootPanel.get("display").add(PhoneBookGWT.DESCRIPTION);
                 } else {
                     RootPanel.get("message").remove(PhoneBookGWT.MESSAGE);
@@ -157,7 +161,20 @@ public class Accueil extends Composite {
             }
         });
     }
-
+    /**
+     * Obtenir le texte de la ligne sélectionné. Enlève "l'indentation" pour les contacts
+     * @return String
+     */
+    public String getSelectedText(){
+        int index = list.getSelectedIndex();
+        if (index == -1)
+            return ""; 
+        String ligne = list.getItemText(index);
+        if (ligne.startsWith("--- ")){
+            ligne = ligne.substring(4);
+        }
+        return ligne;
+    }
     /**
      * Détermine si la ligne sélectionnée dans la ListBox est celle d'un
      * contact.
