@@ -77,10 +77,10 @@ public class Supprimer extends Composite {
 					RootPanel.get("message").add(PhoneBookGWT.MESSAGE);
 				} catch (Exception e) {
 					RootPanel.get("display").remove(PhoneBookGWT.SUPPRIMER);
-					/*RootPanel.get("message").remove(PhoneBookGWT.MESSAGE);
+					RootPanel.get("message").remove(PhoneBookGWT.MESSAGE);
 					PhoneBookGWT.MESSAGE
 							.setHTML("Il y a eu un problème.");
-					RootPanel.get("message").add(PhoneBookGWT.MESSAGE);*/
+					RootPanel.get("message").add(PhoneBookGWT.MESSAGE);
 				}
 				RootPanel.get("display").add(PhoneBookGWT.ACCUEIL);
 				AccueilControler.refresh();
