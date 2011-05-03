@@ -10,4 +10,8 @@
 <fullyQualifiedTypeName name="com.google.gwt.user.client.ui.CheckBox"/>
 <fullyQualifiedTypeName name="com.google.gwt.user.client.Window"/>
 <fullyQualifiedTypeName name="fr.polytech.pooihm.phonebook.Contact"/>
+<fullyQualifiedTypeName name="fr.polytech.pooihm.phonebookgwt.client.modele.Modele"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.client.ui.ListBox"/>
+<fullyQualifiedTypeName name="fr.polytech.pooihm.phonebookgwt.client.controler.AccueilControler"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

@@ -41,9 +41,6 @@ public class Accueil extends Composite {
     /** Retient le groupe consulté par l'utilisateur. */
     private String groupeConsulte;
     
-    /** la liste à afficher */
-    private ListBox list;
-
     /**
      * L'instance d'Accueil, en private conformément au SingletonPattern.
      */
@@ -207,7 +204,7 @@ public class Accueil extends Composite {
     public void resetList(){
     	panel.remove(list);
     	list = new ListBox();
-        list.setVisibleItemCount(5);
+        list.setVisibleItemCount(10);
         list.setWidth("350px");
     	panel.add(list);
     }

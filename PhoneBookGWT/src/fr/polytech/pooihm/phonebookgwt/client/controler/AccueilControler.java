@@ -21,12 +21,16 @@ public class AccueilControler {
 	 * Rafraichit la vue principale
 	 * @throws GroupNotDefinedException 
 	 */
-	public void refresh() throws GroupNotDefinedException{
+	public void refresh(){
 		accueil.resetList();
-		for(String contact : modele.getGroupes()){
-			accueil.addContact(contact);
+		try {
+			for(String contact : modele.getAffichage(Modele.ALL_CONTACTS_GROUP_NAME)){
+				accueil.addContact(contact);
+			}
+		} catch (GroupNotDefinedException e) {
+			//ca veut juste dire que le groupe principal a été choisi
+			//rien à faire ici
 		}
-		
 	}
 	
 	/** Demande si on est sur de supprimer */

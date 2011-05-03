@@ -89,6 +89,13 @@ public class Modele extends fr.polytech.pooihm.phonebook.PhoneBook {
      */
     public ArrayList<String> getAffichage(String groupStar) throws GroupNotDefinedException{
     	ArrayList<String> affichage = new ArrayList<String>();
+    	//on crée le groupe contentnat tout le monde et on teste si c'est le groupe étendu
+    	affichage.add(ALL_CONTACTS_GROUP_NAME);
+        if(groupStar.equals(ALL_CONTACTS_GROUP_NAME)){
+        	for (Contact c : getAllContacts()) {
+                affichage.add("--"+c.getPerson().getFirstname()+" "+c.getPerson().getLastname());
+            }
+        }
         // On parcourt les groupes
         for(String gr : getGroupes()) {
         	//groupe ajouté
