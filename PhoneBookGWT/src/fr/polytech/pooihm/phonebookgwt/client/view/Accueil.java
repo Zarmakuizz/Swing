@@ -37,6 +37,9 @@ public class Accueil extends Composite {
     private HorizontalPanel pBoutons;
     
     private String groupeConsulte;
+    
+    /** la liste à afficher */
+    private ListBox list;
 
     /**
      * L'instance d'Accueil, en private conformément au SingletonPattern.
@@ -65,8 +68,8 @@ public class Accueil extends Composite {
         pBoutons.add(desc);
         pBoutons.add(supp);
 
-        ListBox list = new ListBox();
-        list.setVisibleItemCount(3);
+        list = new ListBox();
+        list.setVisibleItemCount(5);
         list.setWidth("350px");
         for (int i=0; i< 5; i++){
             list.addItem("Onche Hapower");
@@ -138,5 +141,26 @@ public class Accueil extends Composite {
     }
     public static Accueil getInstance(){
         return accueilPrivate;
+    }
+    
+    /**
+     * Remet la liste à vide
+     */
+    public void resetList(){
+    	panel.remove(list);
+    	list = new ListBox();
+        list.setVisibleItemCount(5);
+        list.setWidth("350px");
+    	panel.add(list);
+    }
+    
+    /**
+     * Ajoute un contact dans la liste
+     * @param contact
+     */
+    public void addContact(String contact){
+    	panel.remove(list);
+    	list.addItem(contact);
+    	panel.add(list);
     }
 }

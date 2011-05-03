@@ -9,4 +9,5 @@
 <fullyQualifiedTypeName name="com.google.gwt.i18n.client.Constants"/>
 <fullyQualifiedTypeName name="com.google.gwt.user.client.ui.CheckBox"/>
 <fullyQualifiedTypeName name="com.google.gwt.user.client.Window"/>
+<fullyQualifiedTypeName name="fr.polytech.pooihm.phonebook.Contact"/>
 </qualifiedTypeNameHistroy>

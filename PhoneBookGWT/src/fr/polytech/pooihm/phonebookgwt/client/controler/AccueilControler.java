@@ -1,30 +1,33 @@
 package fr.polytech.pooihm.phonebookgwt.client.controler;
 
+import fr.polytech.pooihm.phonebook.GroupNotDefinedException;
 import fr.polytech.pooihm.phonebookgwt.client.modele.Modele;
 import fr.polytech.pooihm.phonebookgwt.client.view.Accueil;
 
 public class AccueilControler {
 	/** Partie modèle */
-	private static Modele modele;
+	private Modele modele;
 	/** La fenêtere d'accueil */
-	private static Accueil accueil;
+	private Accueil accueil;
 
 	/** initialise et lance la fenetre principale */
-	public AccueilControler() {
-		accueil = new Accueil();
-		// accueil.setVisible(true);
-		modele = new Modele();
-
-		/*
-		 * accueil.fillAllPersons(modele.getAllPersons()); try {
-		 * accueil.fillTheTree(modele.getAllGroupsPersons(),
-		 * modele.getGroupes()); } catch (GroupNotDefinedException e) { //On
-		 * affiche une fenetre d'erreur pour informer l'utilisateur
-		 * JOptionPane.showMessageDialog( accueil, "Ce groupe n'existe pas.",
-		 * "Attention", JOptionPane.WARNING_MESSAGE); }
-		 */
+	public AccueilControler(Modele modele) {
+		this.modele = modele;
+		accueil = Accueil.getInstance();
 	}
 
+	/**
+	 * Rafraichit la vue principale
+	 * @throws GroupNotDefinedException 
+	 */
+	public void refresh() throws GroupNotDefinedException{
+		accueil.resetList();
+		for(String contact : modele.getGroupes()){
+			accueil.addContact(contact);
+		}
+		
+	}
+	
 	/** Demande si on est sur de supprimer */
 	public void vueSuppression() {
 		/*
@@ -54,5 +57,6 @@ public class AccueilControler {
 	public void selectionGroupe() {
 
 	}
+	
 
 }

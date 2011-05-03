@@ -1,5 +1,7 @@
 package fr.polytech.pooihm.phonebookgwt.client;
 
+import fr.polytech.pooihm.phonebookgwt.client.controler.AccueilControler;
+import fr.polytech.pooihm.phonebookgwt.client.modele.Modele;
 import fr.polytech.pooihm.phonebookgwt.client.view.Accueil;
 import fr.polytech.pooihm.phonebookgwt.client.view.Ajouter;
 import fr.polytech.pooihm.phonebookgwt.client.view.Modifier;
@@ -49,26 +51,38 @@ public class PhoneBookGWT implements EntryPoint {
     /**
      * Vue de la modification d'un contact
      */
-    public static final Modifier MODIFIER = Modifier.getInstance();
-    /**
-     * Vue de la description d'un contact
-     */
-    public static final Description DESCRIPTION = Description.getInstance();
-    /**
-     * Vue de la suppression d'un contact
-     */
-    public static final Supprimer SUPPRIMER = Supprimer.getInstance();
-    
-    /**
-     * Create a remote service proxy to talk to the server-side Greeting service.
-     */
+	public static final Modifier MODIFIER = Modifier.getInstance();
+	/**
+	 * Vue de la description d'un contact
+	 */
+	public static final Description DESCRIPTION = Description.getInstance();
+	/**
+	 * Vue de la suppression d'un contact
+	 */
+	public static final Supprimer SUPPRIMER = Supprimer.getInstance();
+
+	/** Le modèle */
+	private Modele modele;
+	
+	/**
+	 * Create a remote service proxy to talk to the server-side Greeting
+	 * service.
+	 */
     private final GreetingServiceAsync greetingService = GWT
             .create(GreetingService.class);
+    
     
     /**
      * This is the entry point method.
      */
     public void onModuleLoad() {
+    	//le modèle
+    	modele = new Modele();
+    	//controlers
+    	AccueilControler accueilControler = new AccueilControler(modele);
+    	accueilControler.refresh();
+    	
+    	
         RootPanel.get("message").add(MESSAGE);
         RootPanel.get("display").add(ACCUEIL);
         
