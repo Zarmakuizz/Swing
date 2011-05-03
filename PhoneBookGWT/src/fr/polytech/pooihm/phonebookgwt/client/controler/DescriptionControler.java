@@ -1,5 +1,6 @@
 package fr.polytech.pooihm.phonebookgwt.client.controler;
 
+import fr.polytech.pooihm.phonebook.Contact;
 import fr.polytech.pooihm.phonebookgwt.client.modele.Modele;
 import fr.polytech.pooihm.phonebookgwt.client.view.Ajouter;
 import fr.polytech.pooihm.phonebookgwt.client.view.Description;
@@ -16,4 +17,7 @@ public class DescriptionControler {
 		description = Description.getInstance();
 	}
 	
+	public Contact getContact(String nom, String prenom){
+	    return modele.getContactFromNames(nom, prenom);
+	}
 }

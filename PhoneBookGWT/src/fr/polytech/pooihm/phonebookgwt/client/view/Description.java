@@ -12,6 +12,7 @@ import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
 import fr.polytech.pooihm.phonebookgwt.client.PhoneBookGWT;
+import fr.polytech.pooihm.phonebookgwt.client.controler.DescriptionControler;
 
 public class Description extends Composite {
     /** Le panel central */
@@ -21,16 +22,7 @@ public class Description extends Composite {
     /** Le bouton pour ajouter le nouveau contact */
     private Button quitter;
     
-    
     private static final Description descriptionPrivate = new Description();
-    /**
-     * Renvoie le bouton Quitter
-     * @return Button le bouton Quitter
-     */
-    public Button getQuitterButton(){
-        return quitter;
-    }
-    
     /**
      * Génère la vue Description
      */
@@ -80,5 +72,9 @@ public class Description extends Composite {
                 RootPanel.get("display").add(PhoneBookGWT.ACCUEIL);
             }
         });
+    }
+    
+    private void loadDescription(String nom, String prenom){
+        
     }
 }
