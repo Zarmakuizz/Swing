@@ -1,12 +1,17 @@
 package fr.polytech.pooihm.phonebookgwt.client.view;
 
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
+import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
+
+import fr.polytech.pooihm.phonebookgwt.client.PhoneBookGWT;
 
 
 public class Ajouter extends Composite {
@@ -22,6 +27,8 @@ public class Ajouter extends Composite {
     /** Le bouton pour ne pas faire de modification et revenir à l'accueil */
     private Button annul;
     
+    
+    private static final Ajouter ajouterPrivate = new Ajouter();
     /**
      * Renvoie le bouton Ajouter
      * @return Button le bouton Ajouter
@@ -40,7 +47,7 @@ public class Ajouter extends Composite {
     /**
      * Génère la vue Ajouter
      */
-    public Ajouter(){
+    private Ajouter(){
         panel = new VerticalPanel();
         panel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
         
@@ -81,5 +88,32 @@ public class Ajouter extends Composite {
         panel.add(annul);
         
         initWidget(panel);
+    }
+    public static Ajouter getInstance(){
+        return ajouterPrivate;
+    }
+    /**
+     * Initialise les handlers de la vue Ajouter
+     */
+    private void initAjouter(){
+        //
+        ajout.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                RootPanel.get("display").remove(PhoneBookGWT.AJOUTER);
+                // Confirmer l'action de l'utilisateur
+                RootPanel.get("message").remove(PhoneBookGWT.MESSAGE);
+                PhoneBookGWT.MESSAGE.setHTML("Le contact a bien été ajouté.");
+                RootPanel.get("message").add(PhoneBookGWT.MESSAGE);
+                RootPanel.get("display").add(PhoneBookGWT.ACCUEIL);
+            }
+        });
+        annul.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                RootPanel.get("display").remove(PhoneBookGWT.AJOUTER);
+                RootPanel.get("display").add(PhoneBookGWT.ACCUEIL);
+            }
+        });
     }
 }

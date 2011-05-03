@@ -36,28 +36,28 @@ public class PhoneBookGWT implements EntryPoint {
     /**
      * Message à afficher en fonction des opérations tentées par l'utilisateur
      */
-    private final HTML message= new HTML("");
+    public static HTML MESSAGE= new HTML("");
     
     /**
      * Vue de l'accueil
      */
-    public static final Accueil accueil = Accueil.getInstance();
+    public static final Accueil ACCUEIL = Accueil.getInstance();
     /**
      * Vue de l'ajout d'un contact
      */
-    private Ajouter ajouter;
+    public static final Ajouter AJOUTER = Ajouter.getInstance();
     /**
      * Vue de la modification d'un contact
      */
-    private Modifier modifier;
+    public static final Modifier MODIFIER = Modifier.getInstance();
     /**
      * Vue de la description d'un contact
      */
-    private Description description;
+    public static final Description DESCRIPTION = Description.getInstance();
     /**
      * Vue de la suppression d'un contact
      */
-    private Supprimer supprimer;
+    public static final Supprimer SUPPRIMER = Supprimer.getInstance();
     
     /**
      * Create a remote service proxy to talk to the server-side Greeting service.
@@ -66,152 +66,12 @@ public class PhoneBookGWT implements EntryPoint {
             .create(GreetingService.class);
     
     /**
-     * Initialise les handlers de la vue d'accueil
-     */
-    private void initAccueil(){
-        accueil.getAddButton().addClickHandler(new ClickHandler() {
-            @Override
-            public void onClick(ClickEvent event) {
-                RootPanel.get("display").remove(accueil);
-                // Enlever le message précédemment affiché, s'il y en avait un
-                RootPanel.get("message").remove(message);
-                message.setHTML("");
-                RootPanel.get("message").add(message);
-                RootPanel.get("display").add(ajouter);
-            }
-        });
-        accueil.getModifierButton().addClickHandler(new ClickHandler() {
-            @Override
-            public void onClick(ClickEvent event) {
-                RootPanel.get("display").remove(accueil);
-                // Enlever le message précédemment affiché, s'il y en avait un
-                RootPanel.get("message").remove(message);
-                message.setHTML("");
-                RootPanel.get("message").add(message);
-                RootPanel.get("display").add(modifier);
-            }
-        });
-        accueil.getDescriptionButton().addClickHandler(new ClickHandler() {
-            @Override
-            public void onClick(ClickEvent event) {
-                RootPanel.get("display").remove(accueil);
-                // Enlever le message précédemment affiché, s'il y en avait un
-                RootPanel.get("message").remove(message);
-                message.setHTML("");
-                RootPanel.get("message").add(message);
-                RootPanel.get("display").add(description);
-            }
-        });
-        accueil.getSupprimerButton().addClickHandler(new ClickHandler() {
-            @Override
-            public void onClick(ClickEvent event) {
-                RootPanel.get("display").remove(accueil);
-                // Enlever le message précédemment affiché, s'il y en avait un
-                RootPanel.get("message").remove(message);
-                message.setHTML("");
-                RootPanel.get("message").add(message);
-                RootPanel.get("display").add(supprimer);
-            }
-        });
-    }
-    /**
-     * Initialise les handlers de la vue Ajouter
-     */
-    private void initAjouter(){
-        ajouter.getAjouterButton().addClickHandler(new ClickHandler() {
-            @Override
-            public void onClick(ClickEvent event) {
-                RootPanel.get("display").remove(ajouter);
-                // Confirmer l'action de l'utilisateur
-                RootPanel.get("message").remove(message);
-                message.setHTML("Le contact a bien été ajouté.");
-                RootPanel.get("message").add(message);
-                RootPanel.get("display").add(accueil);
-            }
-        });
-        ajouter.getAnnulerButton().addClickHandler(new ClickHandler() {
-            @Override
-            public void onClick(ClickEvent event) {
-                RootPanel.get("display").remove(ajouter);
-                RootPanel.get("display").add(accueil);
-            }
-        });
-    }
-    /**
-     * Initialise les handlers de la vue Modifier
-     */
-    private void initModifier(){
-        modifier.getModifierButton().addClickHandler(new ClickHandler() {
-            @Override
-            public void onClick(ClickEvent event) {
-                RootPanel.get("display").remove(modifier);
-                // Confirmer l'action de l'utilisateur
-                RootPanel.get("message").remove(message);
-                message.setHTML("Le contact a bien été modifié.");
-                RootPanel.get("message").add(message);
-                RootPanel.get("display").add(accueil);
-            }
-        });
-        modifier.getAnnulerButton().addClickHandler(new ClickHandler() {
-            @Override
-            public void onClick(ClickEvent event) {
-                RootPanel.get("display").remove(modifier);
-                RootPanel.get("display").add(accueil);
-            }
-        });
-    }
-    /**
-     * Initialise les handlers de la vue Description
-     */
-    private void initDescription(){
-        description.getQuitterButton().addClickHandler(new ClickHandler() {
-            @Override
-            public void onClick(ClickEvent event) {
-                RootPanel.get("display").remove(description);
-                RootPanel.get("display").add(accueil);
-            }
-        });
-    }
-    /**
-     * Initialise les handlers de la vue Supprimer
-     */
-    private void initSupprimer(){
-        supprimer.getConfirmerButton().addClickHandler(new ClickHandler() {
-            @Override
-            public void onClick(ClickEvent event) {
-                RootPanel.get("display").remove(supprimer);
-                // Confirmer l'action de l'utilisateur
-                RootPanel.get("message").remove(message);
-                message.setHTML("Le contact a bien été supprimé.");
-                RootPanel.get("message").add(message);
-                RootPanel.get("display").add(accueil);
-            }
-        });
-        supprimer.getAnnulerButton().addClickHandler(new ClickHandler() {
-            @Override
-            public void onClick(ClickEvent event) {
-                RootPanel.get("display").remove(supprimer);
-                RootPanel.get("display").add(accueil);
-            }
-        });
-    }
-    /**
      * This is the entry point method.
      */
     public void onModuleLoad() {
-        RootPanel.get("message").add(message);
-        accueil = new Accueil();
-        RootPanel.get("display").add(accueil);
-        ajouter = new Ajouter();
-        modifier = new Modifier();
-        description = new Description();
-        supprimer = new Supprimer();
+        RootPanel.get("message").add(MESSAGE);
+        RootPanel.get("display").add(ACCUEIL);
         
-        initAccueil();
-        initAjouter();
-        initModifier();
-        initDescription();
-        initSupprimer();
         //final Button sendButton = new Button("Send");
         //final TextBox nameField = new TextBox();
         //nameField.setText("GWT Mangeur");

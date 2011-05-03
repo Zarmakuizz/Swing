@@ -19,9 +19,11 @@ import com.google.gwt.user.client.ui.Tree;
 import com.google.gwt.user.client.ui.TreeItem;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
+import fr.polytech.pooihm.phonebookgwt.client.PhoneBookGWT;
+
 /**
  * Définit la vue d'accueil de l'application.
- * 
+ * Cette classe utilise le SingletonPattern, pour s'assurer de l'unicité de cette vue au moment de l'exécution.
  * @author zarmakuizz
  * @author namor
  */
@@ -33,57 +35,21 @@ public class Accueil extends Composite {
 
     /** Le panel des boutons */
     private HorizontalPanel pBoutons;
-    /** l'arbre contenant le répertoire */
-    // private JTree tree;
-    /** Noeuds */
-    // DefaultMutableTreeNode racine, groupes, personnes;
-
-    private TextBox textboxtest;
     
+    private String groupeConsulte;
+
+    /**
+     * L'instance d'Accueil, en private conformément au SingletonPattern.
+     */
     private static final Accueil accueilPrivate = new Accueil();
-    /**
-     * Renvoie le bouton Ajouter
-     * 
-     * @return Button Le bouton Ajouter
-     */
-    public Button getAddButton() {
-        return add;
-    }
 
     /**
-     * Renvoie le bouton Modifier
-     * 
-     * @return Button le bouton Modifier
-     */
-    public Button getModifierButton() {
-        return mod;
-    }
-
-    /**
-     * Renvoie le bouton Description
-     * 
-     * @return Button le bouton Description
-     */
-    public Button getDescriptionButton() {
-        return desc;
-    }
-
-    /**
-     * Renvoie le bouton Supprimer
-     * 
-     * @return Button le bouton Supprimer
-     */
-    public Button getSupprimerButton() {
-        return supp;
-    }
-
-    /**
-     * Génère la vue Accueil
+     * Génère la vue Accueil.
      */
     private Accueil() {
+        groupeConsulte = fr.polytech.pooihm.phonebookgwt.modele.ALL_CONTACTS_GROUP_NAME;
         add = new Button();
         add.setText("Ajouter");
-
         mod = new Button();
         mod.setText("Modifier");
         desc = new Button();
@@ -97,29 +63,6 @@ public class Accueil extends Composite {
         pBoutons.add(mod);
         pBoutons.add(desc);
         pBoutons.add(supp);
-        // panel.add(rb0);
-        // panel.add(rb1);
-        // panel.add(rb2);
-        textboxtest = new TextBox();
-        textboxtest.setText("1 2 1 2 this is a test");
-
-        // Tree treeroot = new Tree();
-        // Tree tree1 = new Tree();
-        // Tree tree2 = new Tree();
-        // TreeItem item1 = new TreeItem();
-        // TreeItem item2 = new TreeItem();
-        // TreeItem item3 = new TreeItem();
-        // TreeItem item4 = new TreeItem();
-        // item1.addItem("lol");
-        // item1.addItem("lalali");
-        // item2.addItem("lolilol");
-        // item3.addItem("trololo");
-        // item4.addItem(item3);
-        // tree2.addItem(item2);
-        // tree1.addItem(item1);
-        // tree1.add(tree2);
-        // treeroot.add(tree1);
-        // treeroot.addItem(item2);
 
         ListBox list = new ListBox();
         list.setVisibleItemCount(3);
@@ -131,18 +74,67 @@ public class Accueil extends Composite {
             list.addItem("Noel Jerry");
             list.addItem("Norris Chuck");
         }
-        CheckBox checkbox = new CheckBox();
         
         panel = new VerticalPanel();
         panel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
         panel.add(pBoutons);
         // panel.add(treeroot);
         panel.add(list);
-        panel.add(textboxtest);
-        panel.add(new HTML("<p>Bonjour mon enfant !</p>"));
         initWidget(panel);
     }
-    
+    /**
+     * Initialise les handlers de la vue d'accueil
+     */
+    private void initAccueil(){
+        // Le bouton d'ajout de contact
+        add.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                RootPanel.get("display").remove(PhoneBookGWT.ACCUEIL);
+                // Enlever le message précédemment affiché, s'il y en avait un
+                RootPanel.get("message").remove(PhoneBookGWT.MESSAGE);
+                PhoneBookGWT.MESSAGE.setHTML("");
+                RootPanel.get("message").add(PhoneBookGWT.MESSAGE);
+                RootPanel.get("display").add(PhoneBookGWT.AJOUTER);
+            }
+        });
+        // Le bouton de modification de contact
+        mod.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                RootPanel.get("display").remove(PhoneBookGWT.ACCUEIL);
+                // Enlever le message précédemment affiché, s'il y en avait un
+                RootPanel.get("message").remove(PhoneBookGWT.MESSAGE);
+                PhoneBookGWT.MESSAGE.setHTML("");
+                RootPanel.get("message").add(PhoneBookGWT.MESSAGE);
+                RootPanel.get("display").add(PhoneBookGWT.MODIFIER);
+            }
+        });
+        // Le bouton de visualisation de la description d'un contact
+        desc.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                RootPanel.get("display").remove(PhoneBookGWT.ACCUEIL);
+                // Enlever le message précédemment affiché, s'il y en avait un
+                RootPanel.get("message").remove(PhoneBookGWT.MESSAGE);
+                PhoneBookGWT.MESSAGE.setHTML("");
+                RootPanel.get("message").add(PhoneBookGWT.MESSAGE);
+                RootPanel.get("display").add(PhoneBookGWT.DESCRIPTION);
+            }
+        });
+        // Le bouton de suppression d'un contact
+        supp.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                RootPanel.get("display").remove(PhoneBookGWT.ACCUEIL);
+                // Enlever le message précédemment affiché, s'il y en avait un
+                RootPanel.get("message").remove(PhoneBookGWT.MESSAGE);
+                PhoneBookGWT.MESSAGE.setHTML("");
+                RootPanel.get("message").add(PhoneBookGWT.MESSAGE);
+                RootPanel.get("display").add(PhoneBookGWT.SUPPRIMER);
+            }
+        });
+    }
     public static Accueil getInstance(){
         return accueilPrivate;
     }
