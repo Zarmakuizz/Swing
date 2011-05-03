@@ -1,6 +1,5 @@
 package fr.polytech.pooihm.phonebookgwt.client.controler;
 
-import fr.polytech.pooihm.phonebookgwt.client.modele.Exception;
 import fr.polytech.pooihm.phonebookgwt.client.modele.Modele;
 import fr.polytech.pooihm.phonebookgwt.client.view.Accueil;
 

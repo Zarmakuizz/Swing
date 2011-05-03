@@ -20,15 +20,8 @@ public class SupprimerControler {
 	 * @throws Exception
 	 */
 	public void deleteContact(String line) throws Exception {
-		// on vérifie que la ligne est bien celle d'un contact valide --Prénom Nom
-		if (line.startsWith("--") && line.contains(" ")) {
-			line = line.substring(2, line.length());
-			String prenom = line.substring(0, line.indexOf(" ") - 1);
-			String nom = line.substring(line.indexOf(" "), line.length());
-			Contact aSupprimer = modele.getContactFromNames(prenom, nom);
-			modele.deleteContact(aSupprimer);
-		} else
-			throw new Exception("deletion failed");
+		Contact aSupprimer = modele.getContactFromNames(Control.getFirstNameFromLine(line), Control.getLastNameFromLine(line));
+		modele.deleteContact(aSupprimer);
 	}
 
 }
