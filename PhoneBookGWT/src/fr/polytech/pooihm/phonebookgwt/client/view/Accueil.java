@@ -31,7 +31,7 @@ public class Accueil extends Composite {
     private HorizontalPanel pBoutons;
     /** Retient le groupe consulté par l'utilisateur. */
     private String groupeConsulte;
-    
+
     /**
      * L'instance d'Accueil, en private conformément au SingletonPattern.
      */
