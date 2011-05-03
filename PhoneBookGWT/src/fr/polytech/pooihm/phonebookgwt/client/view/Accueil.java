@@ -39,7 +39,8 @@ public class Accueil extends Composite {
     // DefaultMutableTreeNode racine, groupes, personnes;
 
     private TextBox textboxtest;
-
+    
+    private static final Accueil accueilPrivate = new Accueil();
     /**
      * Renvoie le bouton Ajouter
      * 
@@ -79,7 +80,7 @@ public class Accueil extends Composite {
     /**
      * Génère la vue Accueil
      */
-    public Accueil() {
+    private Accueil() {
         add = new Button();
         add.setText("Ajouter");
 
@@ -140,5 +141,9 @@ public class Accueil extends Composite {
         panel.add(textboxtest);
         panel.add(new HTML("<p>Bonjour mon enfant !</p>"));
         initWidget(panel);
+    }
+    
+    public static Accueil getInstance(){
+        return accueilPrivate;
     }
 }

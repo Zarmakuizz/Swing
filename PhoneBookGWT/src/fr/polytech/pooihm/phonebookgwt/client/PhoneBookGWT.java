@@ -41,7 +41,7 @@ public class PhoneBookGWT implements EntryPoint {
     /**
      * Vue de l'accueil
      */
-    private Accueil accueil;
+    public static final Accueil accueil = Accueil.getInstance();
     /**
      * Vue de l'ajout d'un contact
      */
