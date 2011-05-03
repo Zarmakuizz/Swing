@@ -22,9 +22,13 @@ public class AccueilControler {
 	 * @throws GroupNotDefinedException 
 	 */
 	public static void refresh(){
+		refresh(Modele.ALL_CONTACTS_GROUP_NAME);
+	}
+	
+	public static void refresh(String groupe){
 		accueil.resetList();
 		try {
-			for(String contact : modele.getAffichage(Modele.ALL_CONTACTS_GROUP_NAME)){
+			for(String contact : modele.getAffichage(groupe)){
 				accueil.addContact(contact);
 			}
 		} catch (GroupNotDefinedException e) {

@@ -1,5 +1,7 @@
 package fr.polytech.pooihm.phonebookgwt.client.view;
 
+import com.google.gwt.event.dom.client.ChangeEvent;
+import com.google.gwt.event.dom.client.ChangeHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Button;
@@ -9,9 +11,9 @@ import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
-import com.google.gwt.user.server.rpc.UnexpectedException;
 
 import fr.polytech.pooihm.phonebookgwt.client.PhoneBookGWT;
+import fr.polytech.pooihm.phonebookgwt.client.controler.AccueilControler;
 
 /**
  * Définit la vue d'accueil de l'application. Cette classe utilise le
@@ -31,7 +33,7 @@ public class Accueil extends Composite {
     /** Le panel des boutons */
     private HorizontalPanel pBoutons;
     /** Retient le groupe consulté par l'utilisateur. */
-    private String groupeConsulte;
+    public static String groupeConsulte;
 
     /**
      * L'instance d'Accueil, en private conformément au SingletonPattern.
@@ -54,7 +56,7 @@ public class Accueil extends Composite {
         desc.setText("Description");
         supp = new Button();
         supp.setText("Supprimer");
-        initAccueilBoutons();
+        
         // Préparation du panel de boutons
         pBoutons = new HorizontalPanel();
         pBoutons.setWidth("350px");
@@ -66,9 +68,9 @@ public class Accueil extends Composite {
 
         // Préparation de la liste des groupes et contacts
         list = new ListBox();
-        list.setVisibleItemCount(10);
+        list.setVisibleItemCount(20);
         list.setWidth("330px");
-
+        initAccueilBoutons();
         // Assemblage de la vue dans le panel principal
         panel = new VerticalPanel();
         panel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
@@ -81,6 +83,14 @@ public class Accueil extends Composite {
      * Initialise les handlers de la vue d'accueil
      */
     private void initAccueilBoutons() {
+    	
+		list.addChangeHandler(new ChangeHandler() {
+			@Override
+			public void onChange(ChangeEvent event) {
+				if (!list.getItemText(list.getSelectedIndex()).startsWith("-"))
+					AccueilControler.refresh(list.getItemText(list.getSelectedIndex()));
+			}
+		});
         // Le bouton d'ajout de contact
         add.addClickHandler(new ClickHandler() {
             @Override
@@ -230,8 +240,15 @@ public class Accueil extends Composite {
     public void resetList() {
         panel.remove(list);
         list = new ListBox();
-        list.setVisibleItemCount(10);
+        list.setVisibleItemCount(20);
         list.setWidth("350px");
+        list.addChangeHandler(new ChangeHandler() {
+			@Override
+			public void onChange(ChangeEvent event) {
+				if (!list.getItemText(list.getSelectedIndex()).startsWith("-"))
+					AccueilControler.refresh(list.getItemText(list.getSelectedIndex()));
+			}
+		});
         panel.add(list);
     }
 

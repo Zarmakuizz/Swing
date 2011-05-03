@@ -77,6 +77,7 @@ public class PhoneBookGWT implements EntryPoint {
     	DescriptionControler descriptionControler = new DescriptionControler(modele);
     	ModifierControler modifierControler = new ModifierControler(modele);
     	SupprimerControler supprimerControler = new SupprimerControler(modele);
+    	Accueil.groupeConsulte = Modele.ALL_CONTACTS_GROUP_NAME;
     	accueilControler.refresh();
     	
     	

@@ -12,6 +12,18 @@
 <fullyQualifiedTypeName name="fr.polytech.pooihm.phonebook.Contact"/>
 <fullyQualifiedTypeName name="fr.polytech.pooihm.phonebookgwt.client.modele.Modele"/>
 <fullyQualifiedTypeName name="com.google.gwt.user.client.ui.ListBox"/>
-<fullyQualifiedTypeName name="fr.polytech.pooihm.phonebookgwt.client.controler.AccueilControler"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="fr.polytech.pooihm.phonebookgwt.client.controler.AjouterControler"/>
+<fullyQualifiedTypeName name="fr.polytech.pooihm.phonebookgwt.client.view.Ajouter"/>
+<fullyQualifiedTypeName name="fr.polytech.pooihm.phonebookgwt.client.view.Description"/>
+<fullyQualifiedTypeName name="fr.polytech.pooihm.phonebookgwt.client.view.Modifier"/>
+<fullyQualifiedTypeName name="fr.polytech.pooihm.phonebookgwt.client.controler.SupprimerControler"/>
+<fullyQualifiedTypeName name="com.google.gwt.event.dom.client.ChangeHandler"/>
+<fullyQualifiedTypeName name="com.google.gwt.event.dom.client.FocusHandler"/>
+<fullyQualifiedTypeName name="com.google.gwt.event.dom.client.FocusEvent"/>
+<fullyQualifiedTypeName name="com.google.gwt.event.dom.client.BlurHandler"/>
+<fullyQualifiedTypeName name="com.google.gwt.event.dom.client.BlurEvent"/>
+<fullyQualifiedTypeName name="javax.xml.bind.annotation.DomHandler"/>
+<fullyQualifiedTypeName name="com.google.gwt.event.dom.client.DomEvent"/>
+<fullyQualifiedTypeName name="fr.polytech.pooihm.phonebookgwt.client.controler.AccueilControler"/>
 </qualifiedTypeNameHistroy>
