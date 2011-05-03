@@ -102,7 +102,10 @@ public class Accueil extends Composite {
                 try {
                     ligne = getSelectedText();
                 } catch (IndexOutOfBoundsException e) {
-                    ligne = "";
+                    ligne = "a";
+                    RootPanel.get("message").remove(PhoneBookGWT.MESSAGE);
+                    PhoneBookGWT.MESSAGE.setHTML("<span style='color:red;'>Veuillez sélectionner un contact.</span>");
+                    RootPanel.get("message").add(PhoneBookGWT.MESSAGE);
                 }
                 // Si la ligne sélectionnée est un contact
                 if (ligne.startsWith("--")) {
@@ -112,6 +115,10 @@ public class Accueil extends Composite {
                     PhoneBookGWT.MESSAGE.setHTML(" ");
                     RootPanel.get("message").add(PhoneBookGWT.MESSAGE);
                     RootPanel.get("display").add(PhoneBookGWT.MODIFIER);
+
+                    String[] textes = ligne.substring(2).split(" ");
+                    PhoneBookGWT.MODIFIER.loadDescription(textes[0],
+                            textes[1]);
                 } else {
                     // Enlever l'ancien message affiché, s'il y en avait un
                     RootPanel.get("message").remove(PhoneBookGWT.MESSAGE);
@@ -131,7 +138,10 @@ public class Accueil extends Composite {
                 try {
                     ligne = getSelectedText();
                 } catch (IndexOutOfBoundsException e) {
-                    ligne = "";
+                    ligne = "a";
+                    RootPanel.get("message").remove(PhoneBookGWT.MESSAGE);
+                    PhoneBookGWT.MESSAGE.setHTML("<span style='color:red;'>Veuillez sélectionner un contact.</span>");
+                    RootPanel.get("message").add(PhoneBookGWT.MESSAGE);
                 }
                 // Si la ligne sélectionnée est un contact
                 if (ligne.startsWith("--")) {
@@ -163,7 +173,10 @@ public class Accueil extends Composite {
                 try {
                     ligne = getSelectedText();
                 } catch (IndexOutOfBoundsException e) {
-                    ligne = "";
+                    ligne = "a";
+                    RootPanel.get("message").remove(PhoneBookGWT.MESSAGE);
+                    PhoneBookGWT.MESSAGE.setHTML("<span style='color:red;'>Veuillez sélectionner un contact.</span>");
+                    RootPanel.get("message").add(PhoneBookGWT.MESSAGE);
                 }
                 // Si la ligne sélectionnée est un contact
                 if (ligne.startsWith("--")) {

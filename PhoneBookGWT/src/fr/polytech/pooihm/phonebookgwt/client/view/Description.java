@@ -68,7 +68,6 @@ public class Description extends Composite {
         panel.add(ptelmobile);
         
         panel.add(quitter);
-        
         initWidget(panel);
     }
     public static Description getInstance(){
@@ -109,15 +108,5 @@ public class Description extends Composite {
         ptelmobile.clear();
         ptelmobile.add(htelmobile);
         ptelmobile.add(new HTML("<p>"+c.getCellnum()+"</p>"));
-        
-        /*
-        panel.clear();
-        panel.add(pnom);
-        panel.add(pprenom);
-        panel.add(ptelmaison);
-        panel.add(ptelbureau);
-        panel.add(ptelmobile);
-        initWidget(panel);
-        //*/
     }
 }

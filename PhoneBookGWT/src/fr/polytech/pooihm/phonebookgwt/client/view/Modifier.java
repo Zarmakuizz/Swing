@@ -11,7 +11,10 @@ import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
+import fr.polytech.pooihm.phonebook.Contact;
 import fr.polytech.pooihm.phonebookgwt.client.PhoneBookGWT;
+import fr.polytech.pooihm.phonebookgwt.client.controler.DescriptionControler;
+import fr.polytech.pooihm.phonebookgwt.client.controler.ModifierControler;
 
 public class Modifier extends Composite {
     /** Le panel central */
@@ -21,6 +24,8 @@ public class Modifier extends Composite {
     private HorizontalPanel pnom, pprenom, ptelmaison, ptelbureau, ptelmobile;
     /** Les champs où l'utilisateur renseigne les coordonnées du contact. */
     private TextBox tnom, tprenom, ttelmaison, ttelbureau, ttelmobile;
+    /** Les champs constants */
+    private HTML hnom, hprenom, htelmaison, htelbureau, htelmobile;
     /** Le bouton pour ajouter le nouveau contact */
     private Button modifier;
     /** Le bouton pour ne pas faire de modification et revenir à l'accueil */
@@ -50,33 +55,37 @@ public class Modifier extends Composite {
         panel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
         
         tnom = new TextBox();
-        tnom.setText("$variable");
+        tnom.setText("");
         pnom = new HorizontalPanel();
-        pnom.add(new HTML("<p>Nom : </p>"));
+        hnom = new HTML("<p>Nom : </p>");
+        pnom.add(hnom);
         pnom.add(tnom);
         
         tprenom = new TextBox();
-        tprenom.setText("$variable");
+        tprenom.setText("");
         pprenom = new HorizontalPanel();
-        pprenom.add(new HTML("<p>Prénom : </p>"));
+        hprenom = new HTML("<p>Prénom : </p>");
+        pprenom.add(hprenom);
         pprenom.add(tprenom);
         
         ttelmaison = new TextBox();
-        ttelmaison.setText("$variable");
+        ttelmaison.setText("");
         ptelmaison = new HorizontalPanel();
-        ptelmaison.add(new HTML("<p>Téléphone (maison) : </p>"));
+        htelmaison = new HTML("<p>Téléphone (maison) : </p>");
+        ptelmaison.add(htelmaison);
         ptelmaison.add(ttelmaison);
         
         ttelbureau = new TextBox();
-        ttelbureau.setText("$variable");
+        ttelbureau.setText("");
         ptelbureau = new HorizontalPanel();
         ptelbureau.add(new HTML("<p>Téléphone (bureau) : </p>"));
         ptelbureau.add(ttelbureau);
         
         ttelmobile = new TextBox();
-        ttelmobile.setText("$variable");
+        ttelmobile.setText("");
         ptelmobile = new HorizontalPanel();
-        ptelmobile.add(new HTML("<p>Téléphone (mobile) : </p>"));
+        htelmobile = new HTML("<p>Téléphone (mobile) : </p>");
+        ptelmobile.add(htelmobile);
         ptelmobile.add(ttelmobile);
         
         modifier = new Button("Modifier");
@@ -118,5 +127,32 @@ public class Modifier extends Composite {
                 RootPanel.get("display").add(PhoneBookGWT.ACCUEIL);
             }
         });
+    }
+    public void loadDescription(String nom, String prenom){
+        Contact c = ModifierControler.getContact(nom, prenom);
+        pnom.clear();
+        pnom.add(hnom);
+        tnom.setText(c.getPerson().getLastname());
+        pnom.add(tnom);
+
+        pprenom.clear();
+        pprenom.add(hprenom);
+        tprenom.setText(c.getPerson().getFirstname());
+        pprenom.add(tprenom);
+
+        ptelmaison.clear();
+        ptelmaison.add(htelmaison);
+        ttelmaison.setText(c.getHomenum());
+        ptelmaison.add(ttelmaison);
+
+        ptelbureau.clear();
+        ptelbureau.add(htelbureau);
+        ttelbureau.setText(c.getOfficenum());
+        ptelbureau.add(ttelbureau);
+
+        ptelmobile.clear();
+        ptelmobile.add(htelmobile);
+        ttelmobile.setText(c.getCellnum());
+        ptelmobile.add(ttelmobile);
     }
 }
