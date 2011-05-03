@@ -11,7 +11,7 @@ public class AccueilControler {
 
 	/** initialise et lance la fenetre principale */
 	public AccueilControler() {
-		accueil = new Accueil();
+		accueil = Accueil.getInstance();
 		// accueil.setVisible(true);
 		modele = new Modele();
 
