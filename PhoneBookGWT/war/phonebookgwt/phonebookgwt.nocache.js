@@ -1,17 +1,345 @@
-function phonebookgwt(){var P='',wb='" for "gwt:onLoadErrorFn"',ub='" for "gwt:onPropertyErrorFn"',ib='"><\/script>',Z='#',Tb='.cache.html',_='/',Ob='3E84A0E47E0EB0FC5C7A2C7C64C1E020',Pb='6BB140E258C08FFE8763E8B5FDDACFB4',Qb='704DF1C0DEEC7833D363187525AEC883',Sb=':',ob='::',_b='<script defer="defer">phonebookgwt.onInjectionDone(\'phonebookgwt\')<\/script>',hb='<script id="',rb='=',$='?',tb='Bad handler "',$b='DOMContentLoaded',Rb='EC2E30BF7A5D0AB4DA460D503D3664F5',jb='SCRIPT',gb='__gwt_marker_phonebookgwt',kb='base',cb='baseUrl',T='begin',S='bootstrap',bb='clear.cache.gif',qb='content',Y='end',Ib='gecko',Jb='gecko1_8',U='gwt.codesvr=',V='gwt.hosted=',W='gwt.hybrid',Ub='gwt/standard/standard.css',vb='gwt:onLoadErrorFn',sb='gwt:onPropertyErrorFn',pb='gwt:property',Zb='head',Mb='hosted.html?phonebookgwt',Yb='href',Hb='ie6',Gb='ie8',xb='iframe',ab='img',yb="javascript:''",Vb='link',Lb='loadExternalRefs',lb='meta',Ab='moduleRequested',X='moduleStartup',Fb='msie',mb='name',Cb='opera',Q='phonebookgwt',eb='phonebookgwt.nocache.js',nb='phonebookgwt::',zb='position:absolute;width:0;height:0;border:none',Wb='rel',Eb='safari',db='script',Nb='selectingPermutation',R='startup',Xb='stylesheet',fb='undefined',Kb='unknown',Bb='user.agent',Db='webkit';var l=window,m=document,n=l.__gwtStatsEvent?function(a){return l.__gwtStatsEvent(a)}:null,o=l.__gwtStatsSessionId?l.__gwtStatsSessionId:null,p,q,r,s=P,t={},u=[],v=[],w=[],x=0,y,z;n&&n({moduleName:Q,sessionId:o,subSystem:R,evtGroup:S,millis:(new Date).getTime(),type:T});if(!l.__gwt_stylesLoaded){l.__gwt_stylesLoaded={}}if(!l.__gwt_scriptsLoaded){l.__gwt_scriptsLoaded={}}function A(){var b=false;try{var c=l.location.search;return (c.indexOf(U)!=-1||(c.indexOf(V)!=-1||l.external&&l.external.gwtOnLoad))&&c.indexOf(W)==-1}catch(a){}A=function(){return b};return b}
-function B(){if(p&&q){var b=m.getElementById(Q);var c=b.contentWindow;if(A()){c.__gwt_getProperty=function(a){return H(a)}}phonebookgwt=null;c.gwtOnLoad(y,Q,s,x);n&&n({moduleName:Q,sessionId:o,subSystem:R,evtGroup:X,millis:(new Date).getTime(),type:Y})}}
-function C(){function e(a){var b=a.lastIndexOf(Z);if(b==-1){b=a.length}var c=a.indexOf($);if(c==-1){c=a.length}var d=a.lastIndexOf(_,Math.min(c,b));return d>=0?a.substring(0,d+1):P}
-function f(a){if(a.match(/^\w+:\/\//)){}else{var b=m.createElement(ab);b.src=a+bb;a=e(b.src)}return a}
-function g(){var a=F(cb);if(a!=null){return a}return P}
-function h(){var a=m.getElementsByTagName(db);for(var b=0;b<a.length;++b){if(a[b].src.indexOf(eb)!=-1){return e(a[b].src)}}return P}
-function i(){var a;if(typeof isBodyLoaded==fb||!isBodyLoaded()){var b=gb;var c;m.write(hb+b+ib);c=m.getElementById(b);a=c&&c.previousSibling;while(a&&a.tagName!=jb){a=a.previousSibling}if(c){c.parentNode.removeChild(c)}if(a&&a.src){return e(a.src)}}return P}
-function j(){var a=m.getElementsByTagName(kb);if(a.length>0){return a[a.length-1].href}return P}
-var k=g();if(k==P){k=h()}if(k==P){k=i()}if(k==P){k=j()}if(k==P){k=e(m.location.href)}k=f(k);s=k;return k}
-function D(){var b=document.getElementsByTagName(lb);for(var c=0,d=b.length;c<d;++c){var e=b[c],f=e.getAttribute(mb),g;if(f){f=f.replace(nb,P);if(f.indexOf(ob)>=0){continue}if(f==pb){g=e.getAttribute(qb);if(g){var h,i=g.indexOf(rb);if(i>=0){f=g.substring(0,i);h=g.substring(i+1)}else{f=g;h=P}t[f]=h}}else if(f==sb){g=e.getAttribute(qb);if(g){try{z=eval(g)}catch(a){alert(tb+g+ub)}}}else if(f==vb){g=e.getAttribute(qb);if(g){try{y=eval(g)}catch(a){alert(tb+g+wb)}}}}}}
-function F(a){var b=t[a];return b==null?null:b}
-function G(a,b){var c=w;for(var d=0,e=a.length-1;d<e;++d){c=c[a[d]]||(c[a[d]]=[])}c[a[e]]=b}
-function H(a){var b=v[a](),c=u[a];if(b in c){return b}var d=[];for(var e in c){d[c[e]]=e}if(z){z(a,d,b)}throw null}
-var I;function J(){if(!I){I=true;var a=m.createElement(xb);a.src=yb;a.id=Q;a.style.cssText=zb;a.tabIndex=-1;m.body.appendChild(a);n&&n({moduleName:Q,sessionId:o,subSystem:R,evtGroup:X,millis:(new Date).getTime(),type:Ab});a.contentWindow.location.replace(s+L)}}
-v[Bb]=function(){var b=navigator.userAgent.toLowerCase();var c=function(a){return parseInt(a[1])*1000+parseInt(a[2])};if(b.indexOf(Cb)!=-1){return Cb}else if(b.indexOf(Db)!=-1){return Eb}else if(b.indexOf(Fb)!=-1){if(document.documentMode>=8){return Gb}else{var d=/msie ([0-9]+)\.([0-9]+)/.exec(b);if(d&&d.length==3){var e=c(d);if(e>=6000){return Hb}}}}else if(b.indexOf(Ib)!=-1){return Jb}return Kb};u[Bb]={gecko1_8:0,ie6:1,ie8:2,opera:3,safari:4};phonebookgwt.onScriptLoad=function(){if(I){q=true;B()}};phonebookgwt.onInjectionDone=function(){p=true;n&&n({moduleName:Q,sessionId:o,subSystem:R,evtGroup:Lb,millis:(new Date).getTime(),type:Y});B()};D();C();var K;var L;if(A()){if(l.external&&(l.external.initModule&&l.external.initModule(Q))){l.location.reload();return}L=Mb;K=P}n&&n({moduleName:Q,sessionId:o,subSystem:R,evtGroup:S,millis:(new Date).getTime(),type:Nb});if(!A()){try{G([Jb],Ob);G([Hb],Pb);G([Gb],Pb);G([Cb],Qb);G([Eb],Rb);K=w[H(Bb)];var M=K.indexOf(Sb);if(M!=-1){x=Number(K.substring(M+1));K=K.substring(0,M)}L=K+Tb}catch(a){return}}var N;function O(){if(!r){r=true;if(!__gwt_stylesLoaded[Ub]){var a=m.createElement(Vb);__gwt_stylesLoaded[Ub]=a;a.setAttribute(Wb,Xb);a.setAttribute(Yb,s+Ub);m.getElementsByTagName(Zb)[0].appendChild(a)}B();if(m.removeEventListener){m.removeEventListener($b,O,false)}if(N){clearInterval(N)}}}
-if(m.addEventListener){m.addEventListener($b,function(){J();O()},false)}var N=setInterval(function(){if(/loaded|complete/.test(m.readyState)){J();O()}},50);n&&n({moduleName:Q,sessionId:o,subSystem:R,evtGroup:S,millis:(new Date).getTime(),type:Y});n&&n({moduleName:Q,sessionId:o,subSystem:R,evtGroup:Lb,millis:(new Date).getTime(),type:T});m.write(_b)}
+function phonebookgwt(){
+  var $wnd_0 = window, $doc_0 = document, $stats = $wnd_0.__gwtStatsEvent?function(a){
+    return $wnd_0.__gwtStatsEvent(a);
+  }
+  :null, $sessionId_0 = $wnd_0.__gwtStatsSessionId?$wnd_0.__gwtStatsSessionId:null, scriptsDone, loadDone, bodyDone, base = '', metaProps = {}, values = [], providers = [], answers = [], softPermutationId = 0, onLoadErrorFunc, propertyErrorFunc;
+  $stats && $stats({moduleName:'phonebookgwt', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'bootstrap', millis:(new Date).getTime(), type:'begin'});
+  if (!$wnd_0.__gwt_stylesLoaded) {
+    $wnd_0.__gwt_stylesLoaded = {};
+  }
+  if (!$wnd_0.__gwt_scriptsLoaded) {
+    $wnd_0.__gwt_scriptsLoaded = {};
+  }
+  function isHostedMode(){
+    var result = false;
+    try {
+      var query = $wnd_0.location.search;
+      return (query.indexOf('gwt.codesvr=') != -1 || (query.indexOf('gwt.hosted=') != -1 || $wnd_0.external && $wnd_0.external.gwtOnLoad)) && query.indexOf('gwt.hybrid') == -1;
+    }
+     catch (e) {
+    }
+    isHostedMode = function(){
+      return result;
+    }
+    ;
+    return result;
+  }
+
+  function maybeStartModule(){
+    if (scriptsDone && loadDone) {
+      var iframe = $doc_0.getElementById('phonebookgwt');
+      var frameWnd = iframe.contentWindow;
+      if (isHostedMode()) {
+        frameWnd.__gwt_getProperty = function(name_0){
+          return computePropValue(name_0);
+        }
+        ;
+      }
+      phonebookgwt = null;
+      frameWnd.gwtOnLoad(onLoadErrorFunc, 'phonebookgwt', base, softPermutationId);
+      $stats && $stats({moduleName:'phonebookgwt', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'moduleStartup', millis:(new Date).getTime(), type:'end'});
+    }
+  }
+
+  function computeScriptBase(){
+    function getDirectoryOfFile(path){
+      var hashIndex = path.lastIndexOf('#');
+      if (hashIndex == -1) {
+        hashIndex = path.length;
+      }
+      var queryIndex = path.indexOf('?');
+      if (queryIndex == -1) {
+        queryIndex = path.length;
+      }
+      var slashIndex = path.lastIndexOf('/', Math.min(queryIndex, hashIndex));
+      return slashIndex >= 0?path.substring(0, slashIndex + 1):'';
+    }
+
+    function ensureAbsoluteUrl(url){
+      if (url.match(/^\w+:\/\//)) {
+      }
+       else {
+        var img = $doc_0.createElement('img');
+        img.src = url + 'clear.cache.gif';
+        url = getDirectoryOfFile(img.src);
+      }
+      return url;
+    }
+
+    function tryMetaTag(){
+      var metaVal = __gwt_getMetaProperty('baseUrl');
+      if (metaVal != null) {
+        return metaVal;
+      }
+      return '';
+    }
+
+    function tryNocacheJsTag(){
+      var scriptTags = $doc_0.getElementsByTagName('script');
+      for (var i = 0; i < scriptTags.length; ++i) {
+        if (scriptTags[i].src.indexOf('phonebookgwt.nocache.js') != -1) {
+          return getDirectoryOfFile(scriptTags[i].src);
+        }
+      }
+      return '';
+    }
+
+    function tryMarkerScript(){
+      var thisScript;
+      if (typeof isBodyLoaded == 'undefined' || !isBodyLoaded()) {
+        var markerId = '__gwt_marker_phonebookgwt';
+        var markerScript;
+        $doc_0.write('<script id="' + markerId + '"><\/script>');
+        markerScript = $doc_0.getElementById(markerId);
+        thisScript = markerScript && markerScript.previousSibling;
+        while (thisScript && thisScript.tagName != 'SCRIPT') {
+          thisScript = thisScript.previousSibling;
+        }
+        if (markerScript) {
+          markerScript.parentNode.removeChild(markerScript);
+        }
+        if (thisScript && thisScript.src) {
+          return getDirectoryOfFile(thisScript.src);
+        }
+      }
+      return '';
+    }
+
+    function tryBaseTag(){
+      var baseElements = $doc_0.getElementsByTagName('base');
+      if (baseElements.length > 0) {
+        return baseElements[baseElements.length - 1].href;
+      }
+      return '';
+    }
+
+    var tempBase = tryMetaTag();
+    if (tempBase == '') {
+      tempBase = tryNocacheJsTag();
+    }
+    if (tempBase == '') {
+      tempBase = tryMarkerScript();
+    }
+    if (tempBase == '') {
+      tempBase = tryBaseTag();
+    }
+    if (tempBase == '') {
+      tempBase = getDirectoryOfFile($doc_0.location.href);
+    }
+    tempBase = ensureAbsoluteUrl(tempBase);
+    base = tempBase;
+    return tempBase;
+  }
+
+  function processMetas(){
+    var metas = document.getElementsByTagName('meta');
+    for (var i = 0, n = metas.length; i < n; ++i) {
+      var meta = metas[i], name_0 = meta.getAttribute('name'), content_0;
+      if (name_0) {
+        name_0 = name_0.replace('phonebookgwt::', '');
+        if (name_0.indexOf('::') >= 0) {
+          continue;
+        }
+        if (name_0 == 'gwt:property') {
+          content_0 = meta.getAttribute('content');
+          if (content_0) {
+            var value, eq = content_0.indexOf('=');
+            if (eq >= 0) {
+              name_0 = content_0.substring(0, eq);
+              value = content_0.substring(eq + 1);
+            }
+             else {
+              name_0 = content_0;
+              value = '';
+            }
+            metaProps[name_0] = value;
+          }
+        }
+         else if (name_0 == 'gwt:onPropertyErrorFn') {
+          content_0 = meta.getAttribute('content');
+          if (content_0) {
+            try {
+              propertyErrorFunc = eval(content_0);
+            }
+             catch (e) {
+              alert('Bad handler "' + content_0 + '" for "gwt:onPropertyErrorFn"');
+            }
+          }
+        }
+         else if (name_0 == 'gwt:onLoadErrorFn') {
+          content_0 = meta.getAttribute('content');
+          if (content_0) {
+            try {
+              onLoadErrorFunc = eval(content_0);
+            }
+             catch (e) {
+              alert('Bad handler "' + content_0 + '" for "gwt:onLoadErrorFn"');
+            }
+          }
+        }
+      }
+    }
+  }
+
+  function __gwt_getMetaProperty(name_0){
+    var value = metaProps[name_0];
+    return value == null?null:value;
+  }
+
+  function unflattenKeylistIntoAnswers(propValArray, value){
+    var answer = answers;
+    for (var i = 0, n = propValArray.length - 1; i < n; ++i) {
+      answer = answer[propValArray[i]] || (answer[propValArray[i]] = []);
+    }
+    answer[propValArray[n]] = value;
+  }
+
+  function computePropValue(propName){
+    var value = providers[propName](), allowedValuesMap = values[propName];
+    if (value in allowedValuesMap) {
+      return value;
+    }
+    var allowedValuesList = [];
+    for (var k in allowedValuesMap) {
+      allowedValuesList[allowedValuesMap[k]] = k;
+    }
+    if (propertyErrorFunc) {
+      propertyErrorFunc(propName, allowedValuesList, value);
+    }
+    throw null;
+  }
+
+  var frameInjected;
+  function maybeInjectFrame(){
+    if (!frameInjected) {
+      frameInjected = true;
+      var iframe = $doc_0.createElement('iframe');
+      iframe.src = "javascript:''";
+      iframe.id = 'phonebookgwt';
+      iframe.style.cssText = 'position:absolute;width:0;height:0;border:none';
+      iframe.tabIndex = -1;
+      $doc_0.body.appendChild(iframe);
+      $stats && $stats({moduleName:'phonebookgwt', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'moduleStartup', millis:(new Date).getTime(), type:'moduleRequested'});
+      iframe.contentWindow.location.replace(base + initialHtml);
+    }
+  }
+
+  providers['user.agent'] = function(){
+    var ua = navigator.userAgent.toLowerCase();
+    var makeVersion = function(result){
+      return parseInt(result[1]) * 1000 + parseInt(result[2]);
+    }
+    ;
+    if (ua.indexOf('opera') != -1) {
+      return 'opera';
+    }
+     else if (ua.indexOf('webkit') != -1) {
+      return 'safari';
+    }
+     else if (ua.indexOf('msie') != -1) {
+      if (document.documentMode >= 8) {
+        return 'ie8';
+      }
+       else {
+        var result_0 = /msie ([0-9]+)\.([0-9]+)/.exec(ua);
+        if (result_0 && result_0.length == 3) {
+          var v = makeVersion(result_0);
+          if (v >= 6000) {
+            return 'ie6';
+          }
+        }
+      }
+    }
+     else if (ua.indexOf('gecko') != -1) {
+      return 'gecko1_8';
+    }
+    return 'unknown';
+  }
+  ;
+  values['user.agent'] = {gecko1_8:0, ie6:1, ie8:2, opera:3, safari:4};
+  phonebookgwt.onScriptLoad = function(){
+    if (frameInjected) {
+      loadDone = true;
+      maybeStartModule();
+    }
+  }
+  ;
+  phonebookgwt.onInjectionDone = function(){
+    scriptsDone = true;
+    $stats && $stats({moduleName:'phonebookgwt', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'loadExternalRefs', millis:(new Date).getTime(), type:'end'});
+    maybeStartModule();
+  }
+  ;
+  processMetas();
+  computeScriptBase();
+  var strongName;
+  var initialHtml;
+  if (isHostedMode()) {
+    if ($wnd_0.external && ($wnd_0.external.initModule && $wnd_0.external.initModule('phonebookgwt'))) {
+      $wnd_0.location.reload();
+      return;
+    }
+    initialHtml = 'hosted.html?phonebookgwt';
+    strongName = '';
+  }
+  $stats && $stats({moduleName:'phonebookgwt', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'bootstrap', millis:(new Date).getTime(), type:'selectingPermutation'});
+  if (!isHostedMode()) {
+    try {
+      unflattenKeylistIntoAnswers(['ie6'], '42F6F162AED5438C7B2E7F767ED6D9F7');
+      unflattenKeylistIntoAnswers(['ie8'], '42F6F162AED5438C7B2E7F767ED6D9F7');
+      unflattenKeylistIntoAnswers(['gecko1_8'], '70B2E3A392781822D16EB88EC2E5E653');
+      unflattenKeylistIntoAnswers(['opera'], 'A1F5CBCF66647F343B45B0EDCCFBACD8');
+      unflattenKeylistIntoAnswers(['safari'], 'C2BAE9BC38B49518712E1C4759E3B976');
+      strongName = answers[computePropValue('user.agent')];
+      var idx = strongName.indexOf(':');
+      if (idx != -1) {
+        softPermutationId = Number(strongName.substring(idx + 1));
+        strongName = strongName.substring(0, idx);
+      }
+      initialHtml = strongName + '.cache.html';
+    }
+     catch (e) {
+      return;
+    }
+  }
+  var onBodyDoneTimerId;
+  function onBodyDone(){
+    if (!bodyDone) {
+      bodyDone = true;
+      if (!__gwt_stylesLoaded['gwt/standard/standard.css']) {
+        var l = $doc_0.createElement('link');
+        __gwt_stylesLoaded['gwt/standard/standard.css'] = l;
+        l.setAttribute('rel', 'stylesheet');
+        l.setAttribute('href', base + 'gwt/standard/standard.css');
+        $doc_0.getElementsByTagName('head')[0].appendChild(l);
+      }
+      maybeStartModule();
+      if ($doc_0.removeEventListener) {
+        $doc_0.removeEventListener('DOMContentLoaded', onBodyDone, false);
+      }
+      if (onBodyDoneTimerId) {
+        clearInterval(onBodyDoneTimerId);
+      }
+    }
+  }
+
+  if ($doc_0.addEventListener) {
+    $doc_0.addEventListener('DOMContentLoaded', function(){
+      maybeInjectFrame();
+      onBodyDone();
+    }
+    , false);
+  }
+  var onBodyDoneTimerId = setInterval(function(){
+    if (/loaded|complete/.test($doc_0.readyState)) {
+      maybeInjectFrame();
+      onBodyDone();
+    }
+  }
+  , 50);
+  $stats && $stats({moduleName:'phonebookgwt', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'bootstrap', millis:(new Date).getTime(), type:'end'});
+  $stats && $stats({moduleName:'phonebookgwt', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'loadExternalRefs', millis:(new Date).getTime(), type:'begin'});
+  $doc_0.write('<script defer="defer">phonebookgwt.onInjectionDone(\'phonebookgwt\')<\/script>');
+}
+
 phonebookgwt();

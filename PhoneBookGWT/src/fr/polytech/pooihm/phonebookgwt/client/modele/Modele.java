@@ -41,7 +41,14 @@ public class Modele extends PhoneBook {
         }
         return personnes;
     }
-
+    
+	/**
+	 * Renvoit une ArrayList de chaque groupe, contenant une ArrayList de chaque
+	 * personne, contenant une ArrayList avec en 0 le prénom et en 1 le nom
+	 * 
+	 * @return
+	 * @throws GroupNotDefinedException
+	 */
     public ArrayList<ArrayList<ArrayList<String>>> getAllGroupsPersons()
             throws GroupNotDefinedException {
         ArrayList<ArrayList<ArrayList<String>>> groupes = new ArrayList<ArrayList<ArrayList<String>>>();
@@ -60,7 +67,8 @@ public class Modele extends PhoneBook {
         }
         return groupes;
     }
-
+    
+    
     public ArrayList<String> getGroupes() {
         ArrayList<String> groupes = new ArrayList<String>();
         Iterator iter = ((Set<String>) getGroupNames()).iterator();
@@ -69,4 +77,12 @@ public class Modele extends PhoneBook {
         }
         return groupes;
     }
+    
+    
+    public ArrayList<String> getAffichage(){
+    	
+    }
+    
+    
+    
 }
